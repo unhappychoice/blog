@@ -1,0 +1,13 @@
+.article
+  h2
+    = link_to article.title, article
+  .meta
+    .time
+      span.fa.fa-clock-o
+      = article.date.strftime('%x')
+    .tags
+      span.fa.fa-tag
+      - article.tags.each do |tag|
+        = link_to("#{tag} ", tag_path(tag))
+  = article.summary
+  = link_to 'もっと読む', article

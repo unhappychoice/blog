@@ -1,0 +1,67 @@
+html, body {
+  font-family: 'Noto Sans Japanese', Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  .row {
+    height: 100%;
+    min-height: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  margin: $middle-space 0 $space;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 26px;
+  padding-bottom: $space;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  box-shadow:  0 1px 0 rgba(255, 255, 255, 1);
+}
+
+h2 {
+  font-size: 22px;
+  padding-bottom: $space;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  box-shadow:  0 1px 0 rgba(255, 255, 255, 1);
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+p, ul, ol {
+  margin: 0 0 $middle-space;
+  line-height: 1.8;
+}
+
+li {
+  margin: 0 0 $space;
+}
+
+blockquote {
+  font-size: 14px;
+  border-color: #dedede;
+}
+
+a {
+  color: darken($color-light, 40);
+  &:hover {
+    color: $color-middle;
+    text-decoration: none;
+  }
+  transition: color 0.1s ease-in-out
+}

@@ -1,0 +1,36 @@
+---
+pageable: true
+per_page: 10
+---
+
+= partial :title
+
+ol.breadcrumb
+  - if page_type === 'day'
+    li
+      a href="/" TOP
+    li= link_to("#{year}年", blog_year_path(year))
+    li= link_to("#{month}月", blog_month_path(year, month))
+    li= "#{day}日"
+  - if page_type == 'month'
+    li
+      a href="/" TOP
+    li= link_to("#{year}年", blog_year_path(year))
+    li= "#{month}月"
+  - if page_type == 'year'
+    li
+      a href="/" TOP
+    li= "#{year}年"
+
+- page_articles.each_with_index do |article, i|
+  = partial :article_list_item, locals: { article: article }
+
+- if paginate && num_pages > 1
+  p
+    | Page #{page_number} of #{num_pages}
+  - if prev_page
+    p= link_to '前へ', prev_page
+
+- if paginate
+  - if next_page
+    p= link_to '次へ', next_page

@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem "middleman", "~> 4.0.0"
+gem "middleman-blog"
+gem "middleman-livereload"
+gem "middleman-syntax"
+gem "middleman-minify-html"
+gem "slim"
+gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem "builder", "~> 3.0"
+gem "mgd"

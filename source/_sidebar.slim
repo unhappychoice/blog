@@ -1,0 +1,21 @@
+aside#sidebar
+  h3 最近の記事
+  ol
+    - blog.articles[0...10].each do |article|
+      li
+        = "#{link_to(article.title, article)}"
+  h3 タグ
+  ol
+    - blog.tags.each do |tag, articles|
+      li
+        a href="#{tag_path(tag)}"
+          = "#{tag}"
+          span.badge= "#{articles.count}"
+  h3 月別
+  ol
+    - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+      - articles.group_by {|a| a.date.month }.each do |month, articles|
+        li
+          a href="#{blog_month_path(year, month)}"
+            = "#{year}年 #{month}月"
+            span.badge= "#{articles.count}"
