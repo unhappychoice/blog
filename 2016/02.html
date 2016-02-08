@@ -1,0 +1,210 @@
+<!DOCTYPE html><html><head><meta content="text/html; charset=UTF-8" http-equiv=Content-Type /><meta charset=utf-8 /><meta content="IE=edge;chrome=1" http-equiv=X-UA-Compatible /><meta content="width=device-width, initial-scale=1" name=viewport /><link crossorigin=anonymous href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" rel=stylesheet /><link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel=stylesheet /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel=stylesheet /><script src="https://code.jquery.com/jquery-2.2.0.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script><script crossorigin=anonymous integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><style>.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .c, .highlight .cd {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cm {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .c1 {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.highlight .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.highlight .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sc {
+  color: #e6db74;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .sr {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .ss {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nf {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .bp {
+  color: #f8f8f2;
+}
+.highlight .nb {
+  color: #f8f8f2;
+}
+.highlight .ni {
+  color: #f8f8f2;
+}
+.highlight .nn {
+  color: #f8f8f2;
+}
+.highlight .vc {
+  color: #f8f8f2;
+}
+.highlight .vg {
+  color: #f8f8f2;
+}
+.highlight .vi {
+  color: #f8f8f2;
+}
+.highlight .nv {
+  color: #f8f8f2;
+}
+.highlight .w {
+  color: #f8f8f2;
+}
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight {
+  color: #f8f8f2;
+  background-color: #49483e;
+}</style><link href="/stylesheets/all.css" rel=stylesheet /><script src="/javascripts/all.js"></script><title>unhappychoice</title><link rel=alternate type="application/atom+xml" title="Atom Feed" href="/feed.xml"/><body><button class=toggle-menu type=button><span class="fa fa-bars"></span></button><aside id=sidebar><h3>最近の記事</h3><ol><li><a href="/2016/02/05/sample.html">サンプル</a></li><li><a href="/2012/01/02/example-article2.html">Example 2</a></li><li><a href="/2012/01/01/example-article.html">Example Article</a></li></ol><h3>タグ</h3><ol><li><a href="/tags/example.html">example<span class=badge>2</span></a></li><li><a href="/tags/qiita.html">qiita<span class=badge>1</span></a></li><li><a href="/tags/programming.html">programming<span class=badge>1</span></a></li></ol><h3>月別</h3><ol><li><a href="/2016/02.html">2016年 2月<span class=badge>1</span></a></li><li><a href="/2012/01.html">2012年 1月<span class=badge>2</span></a></li></ol></aside><div id=main role=main><div class=content><h1 class=title><img src="https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=100"/><div class=icons><a href="https://github.com/unhappychoice"><span class="fa fa-github"></span></a><a href="https://www.facebook.com/profile.php?id=100008274691739"><span class="fa fa-facebook-square"></span></a><a href="https://www.linkedin.com/in/yuji-ueki-4a17a5101"><span class="fa fa-linkedin"></span></a></div>unhappychoice.com</h1><ol class=breadcrumb><li><a href="/">TOP</a></li><li><a href="/2016.html">2016年</a></li><li>2月</li></ol><div class=article><h2><a href="/2016/02/05/sample.html">サンプル</a></h2><div class=meta><div class=time><span class="fa fa-clock-o"></span>02/05/16</div><div class=tags><span class="fa fa-tag"></span><a href="/tags/programming.html">programming </a></div></div><p>Markdown記法 表示確認用サンプル</p> <p>任意のアプリケーションで表示確認するためのサンプルです。 新しいアプリケーション入れたときなどに感じをつかむための自分用ですが、よろしければ置いておきますのでどうぞ。</p> <p><a title="forapp-markdown-sample.md - Dropbox" href="https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sample.md">forapp-markdown-sample.md - Dropbox</a></p> <p><a href="/2016/02/05/sample.html">もっと読む</a></div></div></div></body></head></html>

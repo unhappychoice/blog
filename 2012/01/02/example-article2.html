@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head><meta content="text/html; charset=UTF-8" http-equiv=Content-Type /><meta charset=utf-8 /><meta content="IE=edge;chrome=1" http-equiv=X-UA-Compatible /><meta content="width=device-width, initial-scale=1" name=viewport /><link crossorigin=anonymous href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" rel=stylesheet /><link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel=stylesheet /><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel=stylesheet /><script src="https://code.jquery.com/jquery-2.2.0.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script><script crossorigin=anonymous integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><style>.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .c, .highlight .cd {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cm {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .c1 {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.highlight .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.highlight .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sc {
+  color: #e6db74;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .sr {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .ss {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nf {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .bp {
+  color: #f8f8f2;
+}
+.highlight .nb {
+  color: #f8f8f2;
+}
+.highlight .ni {
+  color: #f8f8f2;
+}
+.highlight .nn {
+  color: #f8f8f2;
+}
+.highlight .vc {
+  color: #f8f8f2;
+}
+.highlight .vg {
+  color: #f8f8f2;
+}
+.highlight .vi {
+  color: #f8f8f2;
+}
+.highlight .nv {
+  color: #f8f8f2;
+}
+.highlight .w {
+  color: #f8f8f2;
+}
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight {
+  color: #f8f8f2;
+  background-color: #49483e;
+}</style><link href="/stylesheets/all.css" rel=stylesheet /><script src="/javascripts/all.js"></script><title>unhappychoice - Example 2</title><link rel=alternate type="application/atom+xml" title="Atom Feed" href="/feed.xml"/><body><button class=toggle-menu type=button><span class="fa fa-bars"></span></button><aside id=sidebar><h3>最近の記事</h3><ol><li><a href="/2016/02/05/sample.html">サンプル</a></li><li><a href="/2012/01/02/example-article2.html">Example 2</a></li><li><a href="/2012/01/01/example-article.html">Example Article</a></li></ol><h3>タグ</h3><ol><li><a href="/tags/example.html">example<span class=badge>2</span></a></li><li><a href="/tags/qiita.html">qiita<span class=badge>1</span></a></li><li><a href="/tags/programming.html">programming<span class=badge>1</span></a></li></ol><h3>月別</h3><ol><li><a href="/2016/02.html">2016年 2月<span class=badge>1</span></a></li><li><a href="/2012/01.html">2012年 1月<span class=badge>2</span></a></li></ol></aside><div id=main role=main><div class=content><h1 class=title><img src="https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=100"/><div class=icons><a href="https://github.com/unhappychoice"><span class="fa fa-github"></span></a><a href="https://www.facebook.com/profile.php?id=100008274691739"><span class="fa fa-facebook-square"></span></a><a href="https://www.linkedin.com/in/yuji-ueki-4a17a5101"><span class="fa fa-linkedin"></span></a></div>unhappychoice.com</h1><ol class=breadcrumb><li><a href="/">TOP</a></li><li><a href="/2012.html">2012年</a></li><li><a href="/2012/01.html">1月</a></li><li><a href="/2012/01/02.html">2日</a></li></ol><h2 class=article-title>Example 2</h2><div class=meta><div class=time><span class="fa fa-clock-o"></span>01/02/12</div><div class=tags><span class="fa fa-tag"></span><a href="/tags/qiita.html">qiita </a><a href="/tags/example.html">example </a></div></div><article><p>Markdown記法 チートシート Markdown記法のチートシートです。 本ページではQiitaで使用可能なMarkdownのみ掲載しているため、一部原文と異なります。 Markdownの原文については、<a href="http://daringfireball.net/projects/markdown/syntax.php">Daring Fireball: Markdown Syntax Documentation</a>をご覧下さい。 また、コードに関する記法は<a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a>に準拠しています。 Qiitaでシンタックスハイライト可能な言語一覧については、 <a href="http://qiita.com/Qiita/items/e84f5aad7757afce82ba">シンタックスハイライト可能な言語</a> をご覧下さい。</p> <p></p> <h2>Code - コードの挿入</h2> <p>たとえば、Rubyで記述したコードをファイル名「qiita.rb」として投稿したいときは、 <strong>バッククオート</strong> を使用して以下のように投稿するとシンタックスハイライトが適用されます。 <strong>コードブロック上下に空行を挿入しないと正しく表示されないことがあります。</strong></p> <blockquote> <p>(空行) ```ruby:qiita.rb puts &#39;The best way to log and share programmers knowledge.&#39; ``` (空行)</p> </blockquote> <p><strong>結果</strong></p> <pre class="highlight plaintext"><code>puts 'The best way to log and share programmers knowledge.'
+</code></pre> <p>また、コードをインライン表示することも可能です。</p> <blockquote> <p>` puts &#39;Qiita&#39;` はプログラマのための技術情報共有サービスです。</p> </blockquote> <p><strong>結果</strong></p> <p><code>puts &#39;Qiita&#39;</code> はプログラマのための技術情報共有サービスです。</p> <p>インラインコードがn個連続するバッククオートを含む場合、n+1連続のバッククオートで囲みます。</p> <blockquote> <p>`` `バッククオート` `` や ``` ``2連続バッククオート`` ``` も記述できます。</p> </blockquote> <p><strong>結果</strong></p> <p><code>`バッククオート`</code> や <code>``2連続バッククオート``</code> も記述できます。</p> <h3>Gist連携について</h3> <h5>GitHubアカウントでQiitaにログインされている場合</h5> <p>投稿時、Octocatアイコンにチェックを入れていただくと連携を行います。 コードを含むアイテムを投稿するとコード部分を抽出し、同じ内容がGistにも投稿される仕組みになっています。</p> <p>Gistとの連携は、</p> <ul> <li>コードの投稿</li> <li>Qiita側でのコードの編集</li> </ul> <p>の２点について連携しています。 Gist側でコードを編集されても、 <strong>Qiitaには反映されません</strong> のでご注意下さい。</p> <h2>Format Text - テキストの装飾</h2> <h3>Headers - 見出し</h3> <ul> <li># これはH1タグです</li> <li>## これはH2タグです</li> <li>###### これはH6タグです</li> </ul> <h3>Emphasis - 強調</h3> <pre class="highlight markdown"><code><span class="ge">_イタリック体_</span>を使うには _ か <span class="err">*</span> で囲みます。
+<span class="gs">**太字**</span>を使うには __ か <span class="ge">**</span> で囲みます。
+</code></pre> <p><em>イタリック体</em>を使うには _ か * で囲みます。 <strong>太字</strong>を使うには __ か ** で囲みます。</p> <h3>Strikethrough - 打ち消し線</h3> <pre class="highlight markdown"><code>打ち消し線を使うには ~~ で囲みます。 ~~打ち消し~~
+</code></pre> <p>打ち消し線を使うには ~~ で囲みます。 ~~打ち消し~~</p> <p>イタリックや太文字と同様に前後に <strong>半角スペース</strong> か <strong>改行文字</strong> が必要です。</p> <h2>Lists - リスト</h2> <h3>Disc型</h3> <ul> <li>文頭に「*」「+」「-」のいずれかを入れるとDisc型リストになります</li> <li>要点をまとめる際に便利です</li> <li>リストを挿入する際は、 <strong>リストの上下に空行がないと正しく表示されません。また「*」「+」「-」の後にはスペースが必要です</strong></li> </ul> <h3>Decimal型</h3> <ol> <li> 文頭に「数字.」を入れるとDecimal型リストになります</li> <li> 後からの挿入/移動を考慮して、1. 2. 3. と順番にするのではなく、1. 1. 1. という風に同じ数字にしておくといい具合です。</li> <li> リストを挿入する際は、 <strong>リストの上下に空行がないと正しく表示されません。また「数字.」の後にはスペースが必要です</strong></li> </ol> <h3>Definition型</h3> <p>HTMLの<code>&lt;dl&gt;</code>タグをそのまま使うことで実現できます。</p> <pre class="highlight html"><code><span class="nt">&lt;dl&gt;</span>
+<span class="nt">&lt;dt&gt;</span>リンゴ<span class="nt">&lt;/dt&gt;</span>
+<span class="nt">&lt;dd&gt;</span>赤いフルーツ<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;dt&gt;</span>オレンジ<span class="nt">&lt;/dt&gt;</span>
+<span class="nt">&lt;dd&gt;</span>橙色のフルーツ<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre> <p>次のようになります。</p> <dl> <dt>リンゴ</dt> <dd>赤いフルーツ</dd> <dt>オレンジ</dt> <dd>橙色フルーツ</dd> </dl> <p>注意するべきは、Definition型のリスト内ではMarkdown記法が使えないということです。例えば以下のように書いてはなりません。</p> <pre class="highlight html"><code><span class="nt">&lt;dl&gt;</span>
+<span class="nt">&lt;dt&gt;</span>リンゴ<span class="nt">&lt;/dt&gt;</span>
+<span class="nt">&lt;dd&gt;</span> とても **赤い** フルーツ <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre> <p>次のようになってしまいます。</p> <dl> <dt>リンゴ</dt> <dd> とても **赤い** フルーツ </dd> </dl> <p>Definition型リスト内ではMarkdown記法ではなくて、HTMLタグを使って修飾しなければならないので、正しくは次のようになります。</p> <pre class="highlight html"><code><span class="nt">&lt;dl&gt;</span>
+<span class="nt">&lt;dt&gt;</span>リンゴ<span class="nt">&lt;/dt&gt;</span>
+<span class="nt">&lt;dd&gt;</span> とても<span class="nt">&lt;strong&gt;</span>赤い<span class="nt">&lt;/strong&gt;</span>フルーツ <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre> <dl> <dt>リンゴ</dt> <dd> とても<strong>赤い</strong>フルーツ</dd> </dl> <p>Markdown記法とHTMLタグの対応は次のようになっています。</p> <table><thead> <tr> <th style="text-align: center">修飾</th> <th style="text-align: center">Markdown</th> <th style="text-align: center">HTML</th> </tr> </thead><tbody> <tr> <td style="text-align: center">ボールド</td> <td style="text-align: center"><code>** **</code></td> <td style="text-align: center"><code>&lt;strong&gt;&lt;/strong&gt;</code></td> </tr> <tr> <td style="text-align: center">イタリック</td> <td style="text-align: center"><code>_ _</code></td> <td style="text-align: center"><code>&lt;em&gt;&lt;/em&gt;</code></td> </tr> <tr> <td style="text-align: center">コード</td> <td style="text-align: center"><code>``</code></td> <td style="text-align: center"><code>&lt;code&gt;&lt;/code&gt;</code></td> </tr> <tr> <td style="text-align: center">リンク</td> <td style="text-align: center"><code>[text](url)</code></td> <td style="text-align: center"><code>&lt;a href=&quot;url&quot;&gt;text&lt;/a&gt;</code></td> </tr> </tbody></table> <h2>Blockquotes - 引用</h2> <blockquote> <p>&gt; 文頭に&gt;を置くことで引用になります。 &gt; 複数行にまたがる場合、改行のたびにこの記号を置く必要があります。 &gt; <strong>引用の上下にはリストと同じく空行がないと正しく表示されません</strong> &gt; 引用の中に別のMarkdownを使用することも可能です。</p> <blockquote> <p>これはネストされた引用です。</p> </blockquote> </blockquote> <h2>Horizontal rules - 水平線</h2> <p>下記は全て水平線として表示されます</p> <blockquote> <p>* * * *** ***** - - - ---------------------------------------</p> </blockquote> <h2>Links - リンク</h2> <ul> <li>[リンクテキスト](URL &quot;タイトル&quot;)</li> <li>タイトル付きのリンクを投稿できます。</li> </ul> <p><strong>例</strong></p> <blockquote> <p><em>Markdown:</em> [Qiita](<a href="http://qiita.com">http://qiita.com</a> &quot;Qiita&quot;) <em>結果:</em> <a title=Qiita href="http://qiita.com">Qiita</a></p> </blockquote> <ul> <li>[リンクテキスト](URL)</li> <li>こちらはタイトル無しのリンクになります。</li> </ul> <p><strong>例</strong></p> <blockquote> <p><em>Markdown:</em> [Qiita](<a href="http://qiita.com">http://qiita.com</a>) <em>結果:</em> <a href="http://qiita.com">Qiita</a></p> </blockquote> <ul> <li>[リンクテキスト][名前]</li> <li>[名前]:URL</li> <li>同じURLへのリンクを複数箇所に設定することができます</li> </ul> <p><strong>例</strong></p> <blockquote> <p><em>Markdown:</em> [ここ][link-1] と [この][link-1] リンクは同じになります。 [link-1][] も可能です。 [link-1]:<a href="http://qiita.com/drafts/c686397e4a0f4f11683d">http://qiita.com/drafts/c686397e4a0f4f11683d</a></p> <p><em>結果:</em> <a href="http://qiita.com/drafts/c686397e4a0f4f11683d">ここ</a> と <a href="http://qiita.com/drafts/c686397e4a0f4f11683d">この</a> リンクは同じになります。 <a href="http://qiita.com/drafts/c686397e4a0f4f11683d">link-1</a> も可能です。</p> </blockquote> <h2>Images - 画像埋め込み</h2> <ul> <li>![代替テキスト](画像のURL)</li> <li>タイトル無しの画像を埋め込む</li> <li>![代替テキスト](画像のURL &quot;画像タイトル&quot;)</li> <li>タイトル有りの画像を埋め込む</li> </ul> <p><strong>例</strong></p> <blockquote> <p><em>Markdown:</em> ![Qiita](<a href="http://qiita.com/icons/favicons/public/apple-touch-icon.png">http://qiita.com/icons/favicons/public/apple-touch-icon.png</a> &quot;Qiita&quot;) <em>結果:</em> <img title=Qiita alt=Qiita src="http://qiita.com/icons/favicons/public/apple-touch-icon.png"/></p> </blockquote> <h2>テーブル記法</h2> <pre class="highlight plaintext"><code>| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |      column |    column    |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
+</code></pre> <p>上記のように書くと，以下のように表示されます．</p> <table><thead> <tr> <th style="text-align: left">Left align</th> <th style="text-align: right">Right align</th> <th style="text-align: center">Center align</th> </tr> </thead><tbody> <tr> <td style="text-align: left">This</td> <td style="text-align: right">This</td> <td style="text-align: center">This</td> </tr> <tr> <td style="text-align: left">column</td> <td style="text-align: right">column</td> <td style="text-align: center">column</td> </tr> <tr> <td style="text-align: left">will</td> <td style="text-align: right">will</td> <td style="text-align: center">will</td> </tr> <tr> <td style="text-align: left">be</td> <td style="text-align: right">be</td> <td style="text-align: center">be</td> </tr> <tr> <td style="text-align: left">left</td> <td style="text-align: right">right</td> <td style="text-align: center">center</td> </tr> <tr> <td style="text-align: left">aligned</td> <td style="text-align: right">aligned</td> <td style="text-align: center">aligned</td> </tr> </tbody></table> <h2>数式の挿入</h2> <p>コードブロックの言語指定に &quot;math&quot; を指定することでTeX記法を用いて数式を記述することができます。</p> <blockquote> <p>```math \left( \sum<em>{k=1}^n a</em>k b<em>k \right)^{!!2} \leq \left( \sum</em>{k=1}^n a<em>k^2 \right) \left( \sum</em>{k=1}^n b_k^2 \right) ```</p> </blockquote> <pre class="highlight plaintext"><code>\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
+\left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+</code></pre> <p><code>$2^3$</code> のように数式を &quot;$&quot; で挟むと行中に数式を埋め込むこともできます。</p> <blockquote> <p>x^2 + y^2 = 1 をインライン表示すると $x^2 + y^2 = 1$ になります。</p> </blockquote> <p>ただしインライン数式の中でコントロールシンボル（<code>\{</code>のような、バックスラッシュの後に記号が続くもの）を使うと、後述のバックスラッシュによるMarkdownのエスケープと衝突してしまいます。</p> <pre class="highlight plaintext"><code>$a = \{1, 2, 3\}$
+</code></pre> <blockquote> <p>$a = {1, 2, 3}$</p> </blockquote> <p>なので次のように二つのバックスラッシュを使います。</p> <pre class="highlight plaintext"><code>$a = \\{1, 2, 3\\}$
+</code></pre> <blockquote> <p>$a = \{1, 2, 3\}$</p> </blockquote> <h2>目次(TOC)の自動挿入</h2> <p>目次は記事内の見出しを元に自動生成し、右上に自動挿入されます。詳細は<a href="http://blog.qiita.com/post/77055935852/qiita-toc">目次機能の紹介記事</a>をご覧ください。</p> <h2>注釈</h2> <p>本文中に<code>[^1]</code>や<code>[^example]</code>のように文字列を記述することで、脚注へのリンクを表現できます。注釈内容は、同じく本文中に <code>[^1]: ...</code> というように記述します<a href="注釈内容を記述する位置は、本文の途中でも末尾でも構いません。">^1</a>。</p> <h2>絵文字</h2> <p>厳密には Markdown 記法の外ですが、<code>:</code> で囲って、絵文字を埋め込めます。</p> <p><strong>例</strong></p> <pre class="highlight plaintext"><code>\:kissing_closed_eyes: chu☆
+</code></pre> <blockquote> <p>:kissing<em>closed</em>eyes: chu☆</p> </blockquote> <p>絵文字チートシート <a href="http://www.emoji-cheat-sheet.com/">http://www.emoji-cheat-sheet.com/</a></p> <h2>その他</h2> <p>バックスラッシュ[\]をMarkdownの前に挿入することで、Markdownをエスケープ(無効化)することができます。</p> <p><strong>例</strong></p> <blockquote> <p># H1 エスケープされています</p> </blockquote> <p>また本文では一部のHTMLタグも利用可能です。</p> </article><div class=next><a href="/2016/02/05/sample.html">次の記事へ</a></div><div class=prev><a href="/2012/01/01/example-article.html">前の記事へ</a></div></div></div></body></head></html>

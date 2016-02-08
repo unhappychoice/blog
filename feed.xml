@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2016-02-05T09:00:00+09:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>サンプル</title>
+    <link rel="alternate" href="http://blog.url.com/2016/02/05/sample.html"/>
+    <id>http://blog.url.com/2016/02/05/sample.html</id>
+    <published>2016-02-05T09:00:00+09:00</published>
+    <updated>2016-02-09T04:17:26+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Markdown記法 表示確認用サンプル&lt;/p&gt;
+
+&lt;p&gt;任意のアプリケーションで表示確認するためのサンプルです。
+新しいアプリケーション入れたときなどに感じをつかむための自分用ですが、よろしければ置いておきますのでどうぞ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a title="forapp-markdown-sample.md - Dropbox" href="https://www.dropbox.com/s/4z6kot27jmikhx5/forapp-markdown-sample.md"&gt;forapp-markdown-sample.md - Dropbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h1&gt;見出し1&lt;/h1&gt;
+
+&lt;h2&gt;見出し2&lt;/h2&gt;
+
+&lt;h3&gt;見出し3&lt;/h3&gt;
+
+&lt;h4&gt;見出し4&lt;/h4&gt;
+
+&lt;h5&gt;見出し5&lt;/h5&gt;
+
+&lt;h6&gt;見出し6&lt;/h6&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ここは段落（&amp;lt;p&amp;gt;）です。♪むかしむかし浦島が、助けた亀に連れられて。って浦島呼び捨てかよ！ さん付けしてやれよ！&lt;/p&gt;
+
+&lt;p&gt;タグとして認識されたくない、表示したい文字の直前にエスケープ文字を記述します。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;\&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;強調 strongです。&lt;/strong&gt; &lt;strong&gt;これも強調です。&lt;/strong&gt; &lt;strong&gt;strongタグです。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;斜体 italicです。&lt;/em&gt; &lt;em&gt;これも斜体です。&lt;/em&gt; &lt;i&gt;iタグです。&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;強調斜体です。&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;強調斜体です。&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;emタグです。&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;~~対応に差があるみたいだけど取り消し線。~~ &lt;s&gt;sタグです。&lt;/s&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引用します&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引用のネストです&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;上に一行空けないとネストのままです&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;水平線（&amp;lt;hr&amp;gt;）各種&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;hr&gt;
+
+&lt;hr&gt;
+
+&lt;hr&gt;
+
+&lt;hr&gt;
+
+&lt;hr&gt;
+
+&lt;ul&gt;
+&lt;li&gt;箇条書きリスト&lt;/li&gt;
+&lt;li&gt;箇条書きリスト&lt;/li&gt;
+&lt;li&gt;二階層め・箇条書きリスト&lt;/li&gt;
+&lt;li&gt;箇条書きリスト&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;ol&gt;
+&lt;li&gt;番号付きリスト&lt;/li&gt;
+&lt;li&gt;番号付きリスト&lt;/li&gt;
+&lt;li&gt;二階層め・番号付きリスト&lt;/li&gt;
+&lt;li&gt;三階層め・番号付きリスト&lt;/li&gt;
+&lt;li&gt;三階層め・番号付きリスト&lt;/li&gt;
+&lt;li&gt;二階層め・番号付きリスト&lt;/li&gt;
+&lt;li&gt;番号付きリスト&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;バッククォート3個ずつでくくるとソースコード &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt; です。
+###ここにはMarkdown書式は効きません
+/* コメント */
+testtest // コメント
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&amp;gt;
+&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight css"&gt;&lt;code&gt;&lt;span class="nt"&gt;body&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nl"&gt;display&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;none&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight php"&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;is_tag&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt; &lt;span class="nv"&gt;$posts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;query_posts&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$query_string&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s1"&gt;'&amp;amp;showposts=20'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;バッククォート1個ずつで囲むとインラインのコード &amp;lt;code&amp;gt;&lt;/code&gt; です。&lt;code&gt;body { visibility: hidden; }&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;テキストリンク &lt;a title="WIRED.jp" href="http://wired.jp/"&gt;WIRED.jp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;画像埋め込み
+&lt;img title="salchu_image02.jpg" alt="うきっ！" src="http://mkb.salchu.net/image/salchu_image02.jpg" /&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;Left align&lt;/th&gt;
+&lt;th style="text-align: right"&gt;Right align&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Center align&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;This&lt;/td&gt;
+&lt;td style="text-align: right"&gt;This&lt;/td&gt;
+&lt;td style="text-align: center"&gt;This&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;column&lt;/td&gt;
+&lt;td style="text-align: right"&gt;column&lt;/td&gt;
+&lt;td style="text-align: center"&gt;column&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;will&lt;/td&gt;
+&lt;td style="text-align: right"&gt;will&lt;/td&gt;
+&lt;td style="text-align: center"&gt;will&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;be&lt;/td&gt;
+&lt;td style="text-align: right"&gt;be&lt;/td&gt;
+&lt;td style="text-align: center"&gt;be&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;left&lt;/td&gt;
+&lt;td style="text-align: right"&gt;right&lt;/td&gt;
+&lt;td style="text-align: center"&gt;center&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;aligned&lt;/td&gt;
+&lt;td style="text-align: right"&gt;aligned&lt;/td&gt;
+&lt;td style="text-align: center"&gt;aligned&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;（Kobitoのヘルプmdから拝借しました）&lt;/p&gt;
+&lt;pre class="highlight java"&gt;&lt;code&gt;&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="n"&gt;jp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;dip&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;socialbuild&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;controller&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.event.Listener&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.event.EventHandler&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.event.player.PlayerInteractEvent&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.event.block.SignChangeEvent&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.event.block.BlockBreakEvent&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.model.SocialBuildSign&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.block.Block&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.entity.Player&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.isSignItem&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.event.block.Action&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.model.Good&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.uuid&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.bukkit.block.Sign&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.canGood&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.canUnGood&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.isCreative&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.model.SignText&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.Notifier&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.canPlace&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.isAttachedSign&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;jp.dip.socialbuild.extension.attachedSign&lt;/span&gt;
+
+&lt;span class="cm"&gt;/**
+* Created by unhappychoice on 2015/05/24.
+*/&lt;/span&gt;
+
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;SignEventsController&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Listener&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+  &lt;span class="cm"&gt;/**
+  * an event handler for placing sign
+  */&lt;/span&gt;
+  &lt;span class="n"&gt;EventHandler&lt;/span&gt;
+  &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt; &lt;span class="n"&gt;onSignPlace&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;e:&lt;/span&gt; &lt;span class="n"&gt;SignChangeEvent&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;player&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getPlayer&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getBlock&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getLocation&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getLines&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;toList&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s"&gt;"[sb]"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="na"&gt;isEmpty&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;fillInName&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SocialBuildSign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;build&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;canPlace&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;save&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;SignText&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;replaceSignText&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;createSign&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;failToCreateSign&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+  &lt;span class="o"&gt;}&lt;/span&gt;
+
+  &lt;span class="cm"&gt;/**
+  * an event handler for breaking sign
+  */&lt;/span&gt;
+  &lt;span class="n"&gt;EventHandler&lt;/span&gt;
+  &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt; &lt;span class="n"&gt;onSignBreak&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;e:&lt;/span&gt; &lt;span class="n"&gt;BlockBreakEvent&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="c1"&gt;// TODO: reconsider breaking process&lt;/span&gt;
+
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getBlock&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;player&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getPlayer&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;isSignItem&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;SocialBuildSign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;breakSign&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getLocation&lt;/span&gt;&lt;span class="o"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;isAttachedSign&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;signs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;attachedSign&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+      &lt;span class="n"&gt;signs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;forEach&lt;/span&gt;&lt;span class="o"&gt;({&lt;/span&gt;
+        &lt;span class="n"&gt;SocialBuildSign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;breakSign&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getLocation&lt;/span&gt;&lt;span class="o"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="o"&gt;})&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+  &lt;span class="o"&gt;}&lt;/span&gt;
+
+  &lt;span class="cm"&gt;/**
+  * an event handler for clicking sign
+  */&lt;/span&gt;
+  &lt;span class="n"&gt;EventHandler&lt;/span&gt;
+  &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt; &lt;span class="n"&gt;onClickSign&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;e:&lt;/span&gt; &lt;span class="n"&gt;PlayerInteractEvent&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClickedBlock&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;player&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getPlayer&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;isSignItem&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;val&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SocialBuildSign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;find&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getLocation&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;isCreative&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;setCancelled&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;when&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getAction&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;LEFT_CLICK_BLOCK&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;leftClick&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;Action&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;RIGHT_CLICK_BLOCK&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;rightClick&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+  &lt;span class="o"&gt;}&lt;/span&gt;
+
+  &lt;span class="c1"&gt;// ---------------------------------------------------------------------------------------------&lt;/span&gt;
+  &lt;span class="c1"&gt;// private&lt;/span&gt;
+
+  &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt; &lt;span class="n"&gt;leftClick&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;player:&lt;/span&gt; &lt;span class="n"&gt;Player&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nl"&gt;sign:&lt;/span&gt; &lt;span class="n"&gt;SocialBuildSign&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nl"&gt;block:&lt;/span&gt; &lt;span class="n"&gt;Block&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;canGood&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;create&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;uuid&lt;/span&gt;&lt;span class="o"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;params&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;).&lt;/span&gt;&lt;span class="na"&gt;save&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+      &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;updateGoodCount&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getState&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;Sign&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sentGood&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;failToSendGood&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+  &lt;span class="o"&gt;}&lt;/span&gt;
+
+  &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;fun&lt;/span&gt; &lt;span class="n"&gt;rightClick&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;player:&lt;/span&gt; &lt;span class="n"&gt;Player&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nl"&gt;sign:&lt;/span&gt; &lt;span class="n"&gt;SocialBuildSign&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nl"&gt;block:&lt;/span&gt; &lt;span class="n"&gt;Block&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;canUnGood&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Good&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;where&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;uuid&lt;/span&gt;&lt;span class="o"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;params&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;)?.&lt;/span&gt;&lt;span class="na"&gt;destroy&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+      &lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;updateGoodCount&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getState&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="n"&gt;as&lt;/span&gt; &lt;span class="n"&gt;Sign&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;cancelGood&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;failToCancelGood&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+  &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Example 2</title>
+    <link rel="alternate" href="http://blog.url.com/2012/01/02/example-article2.html"/>
+    <id>http://blog.url.com/2012/01/02/example-article2.html</id>
+    <published>2012-01-02T09:00:00+09:00</published>
+    <updated>2016-02-09T04:17:26+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Markdown記法 チートシート
+Markdown記法のチートシートです。
+本ページではQiitaで使用可能なMarkdownのみ掲載しているため、一部原文と異なります。
+Markdownの原文については、&lt;a href="http://daringfireball.net/projects/markdown/syntax.php"&gt;Daring Fireball: Markdown Syntax Documentation&lt;/a&gt;をご覧下さい。
+また、コードに関する記法は&lt;a href="http://github.github.com/github-flavored-markdown/"&gt;GitHub Flavored Markdown&lt;/a&gt;に準拠しています。
+Qiitaでシンタックスハイライト可能な言語一覧については、 &lt;a href="http://qiita.com/Qiita/items/e84f5aad7757afce82ba"&gt;シンタックスハイライト可能な言語&lt;/a&gt; をご覧下さい。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2&gt;Code - コードの挿入&lt;/h2&gt;
+
+&lt;p&gt;たとえば、Rubyで記述したコードをファイル名「qiita.rb」として投稿したいときは、 &lt;strong&gt;バッククオート&lt;/strong&gt; を使用して以下のように投稿するとシンタックスハイライトが適用されます。
+&lt;strong&gt;コードブロック上下に空行を挿入しないと正しく表示されないことがあります。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(空行)
+```ruby:qiita.rb
+puts &amp;#39;The best way to log and share programmers knowledge.&amp;#39;
+```
+(空行)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;結果&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;puts 'The best way to log and share programmers knowledge.'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;また、コードをインライン表示することも可能です。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;` puts &amp;#39;Qiita&amp;#39;` はプログラマのための技術情報共有サービスです。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;結果&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;puts &amp;#39;Qiita&amp;#39;&lt;/code&gt; はプログラマのための技術情報共有サービスです。&lt;/p&gt;
+
+&lt;p&gt;インラインコードがn個連続するバッククオートを含む場合、n+1連続のバッククオートで囲みます。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;`` `バッククオート` `` や ``` ``2連続バッククオート`` ``` も記述できます。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;結果&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;`バッククオート`&lt;/code&gt; や &lt;code&gt;``2連続バッククオート``&lt;/code&gt; も記述できます。&lt;/p&gt;
+
+&lt;h3&gt;Gist連携について&lt;/h3&gt;
+
+&lt;h5&gt;GitHubアカウントでQiitaにログインされている場合&lt;/h5&gt;
+
+&lt;p&gt;投稿時、Octocatアイコンにチェックを入れていただくと連携を行います。
+コードを含むアイテムを投稿するとコード部分を抽出し、同じ内容がGistにも投稿される仕組みになっています。&lt;/p&gt;
+
+&lt;p&gt;Gistとの連携は、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;コードの投稿&lt;/li&gt;
+&lt;li&gt;Qiita側でのコードの編集&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;の２点について連携しています。
+Gist側でコードを編集されても、 &lt;strong&gt;Qiitaには反映されません&lt;/strong&gt; のでご注意下さい。&lt;/p&gt;
+
+&lt;h2&gt;Format Text - テキストの装飾&lt;/h2&gt;
+
+&lt;h3&gt;Headers - 見出し&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;# これはH1タグです&lt;/li&gt;
+&lt;li&gt;## これはH2タグです&lt;/li&gt;
+&lt;li&gt;###### これはH6タグです&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Emphasis - 強調&lt;/h3&gt;
+&lt;pre class="highlight markdown"&gt;&lt;code&gt;&lt;span class="ge"&gt;_イタリック体_&lt;/span&gt;を使うには _ か &lt;span class="err"&gt;*&lt;/span&gt; で囲みます。
+&lt;span class="gs"&gt;**太字**&lt;/span&gt;を使うには __ か &lt;span class="ge"&gt;**&lt;/span&gt; で囲みます。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;イタリック体&lt;/em&gt;を使うには _ か * で囲みます。
+&lt;strong&gt;太字&lt;/strong&gt;を使うには __ か ** で囲みます。&lt;/p&gt;
+
+&lt;h3&gt;Strikethrough - 打ち消し線&lt;/h3&gt;
+&lt;pre class="highlight markdown"&gt;&lt;code&gt;打ち消し線を使うには ~~ で囲みます。 ~~打ち消し~~
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打ち消し線を使うには ~~ で囲みます。 ~~打ち消し~~&lt;/p&gt;
+
+&lt;p&gt;イタリックや太文字と同様に前後に &lt;strong&gt;半角スペース&lt;/strong&gt; か &lt;strong&gt;改行文字&lt;/strong&gt; が必要です。&lt;/p&gt;
+
+&lt;h2&gt;Lists - リスト&lt;/h2&gt;
+
+&lt;h3&gt;Disc型&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文頭に「*」「+」「-」のいずれかを入れるとDisc型リストになります&lt;/li&gt;
+&lt;li&gt;要点をまとめる際に便利です&lt;/li&gt;
+&lt;li&gt;リストを挿入する際は、 &lt;strong&gt;リストの上下に空行がないと正しく表示されません。また「*」「+」「-」の後にはスペースが必要です&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Decimal型&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt; 文頭に「数字.」を入れるとDecimal型リストになります&lt;/li&gt;
+&lt;li&gt; 後からの挿入/移動を考慮して、1. 2. 3. と順番にするのではなく、1. 1. 1. という風に同じ数字にしておくといい具合です。&lt;/li&gt;
+&lt;li&gt; リストを挿入する際は、 &lt;strong&gt;リストの上下に空行がないと正しく表示されません。また「数字.」の後にはスペースが必要です&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Definition型&lt;/h3&gt;
+
+&lt;p&gt;HTMLの&lt;code&gt;&amp;lt;dl&amp;gt;&lt;/code&gt;タグをそのまま使うことで実現できます。&lt;/p&gt;
+&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;dl&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;リンゴ&lt;span class="nt"&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;赤いフルーツ&lt;span class="nt"&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;オレンジ&lt;span class="nt"&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dd&amp;gt;&lt;/span&gt;橙色のフルーツ&lt;span class="nt"&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/dl&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次のようになります。&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;リンゴ&lt;/dt&gt;
+&lt;dd&gt;赤いフルーツ&lt;/dd&gt;
+&lt;dt&gt;オレンジ&lt;/dt&gt;
+&lt;dd&gt;橙色フルーツ&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;注意するべきは、Definition型のリスト内ではMarkdown記法が使えないということです。例えば以下のように書いてはなりません。&lt;/p&gt;
+&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;dl&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;リンゴ&lt;span class="nt"&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dd&amp;gt;&lt;/span&gt; とても **赤い** フルーツ &lt;span class="nt"&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/dl&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次のようになってしまいます。&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;リンゴ&lt;/dt&gt;
+&lt;dd&gt; とても **赤い** フルーツ &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Definition型リスト内ではMarkdown記法ではなくて、HTMLタグを使って修飾しなければならないので、正しくは次のようになります。&lt;/p&gt;
+&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;dl&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dt&amp;gt;&lt;/span&gt;リンゴ&lt;span class="nt"&gt;&amp;lt;/dt&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;dd&amp;gt;&lt;/span&gt; とても&lt;span class="nt"&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;赤い&lt;span class="nt"&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;フルーツ &lt;span class="nt"&gt;&amp;lt;/dd&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/dl&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;リンゴ&lt;/dt&gt;
+&lt;dd&gt; とても&lt;strong&gt;赤い&lt;/strong&gt;フルーツ&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Markdown記法とHTMLタグの対応は次のようになっています。&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;修飾&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Markdown&lt;/th&gt;
+&lt;th style="text-align: center"&gt;HTML&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;ボールド&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;**  **&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;&amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;イタリック&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;_  _&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;コード&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;``&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;&amp;lt;code&amp;gt;&amp;lt;/code&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;リンク&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;[text](url)&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: center"&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;url&amp;quot;&amp;gt;text&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2&gt;Blockquotes - 引用&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;gt; 文頭に&amp;gt;を置くことで引用になります。
+&amp;gt; 複数行にまたがる場合、改行のたびにこの記号を置く必要があります。
+&amp;gt; &lt;strong&gt;引用の上下にはリストと同じく空行がないと正しく表示されません&lt;/strong&gt;
+&amp;gt; 引用の中に別のMarkdownを使用することも可能です。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;これはネストされた引用です。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Horizontal rules - 水平線&lt;/h2&gt;
+
+&lt;p&gt;下記は全て水平線として表示されます&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;* * *
+***
+*****
+- - -
+---------------------------------------&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Links - リンク&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[リンクテキスト](URL &amp;quot;タイトル&amp;quot;)&lt;/li&gt;
+&lt;li&gt;タイトル付きのリンクを投稿できます。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Markdown:&lt;/em&gt; [Qiita](&lt;a href="http://qiita.com"&gt;http://qiita.com&lt;/a&gt; &amp;quot;Qiita&amp;quot;)
+&lt;em&gt;結果:&lt;/em&gt; &lt;a title="Qiita" href="http://qiita.com"&gt;Qiita&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[リンクテキスト](URL)&lt;/li&gt;
+&lt;li&gt;こちらはタイトル無しのリンクになります。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Markdown:&lt;/em&gt; [Qiita](&lt;a href="http://qiita.com"&gt;http://qiita.com&lt;/a&gt;)
+&lt;em&gt;結果:&lt;/em&gt; &lt;a href="http://qiita.com"&gt;Qiita&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[リンクテキスト][名前]&lt;/li&gt;
+&lt;li&gt;[名前]:URL&lt;/li&gt;
+&lt;li&gt;同じURLへのリンクを複数箇所に設定することができます&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Markdown:&lt;/em&gt;
+[ここ][link-1] と [この][link-1] リンクは同じになります。
+[link-1][] も可能です。
+[link-1]:&lt;a href="http://qiita.com/drafts/c686397e4a0f4f11683d"&gt;http://qiita.com/drafts/c686397e4a0f4f11683d&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;結果:&lt;/em&gt;
+&lt;a href="http://qiita.com/drafts/c686397e4a0f4f11683d"&gt;ここ&lt;/a&gt; と &lt;a href="http://qiita.com/drafts/c686397e4a0f4f11683d"&gt;この&lt;/a&gt; リンクは同じになります。
+&lt;a href="http://qiita.com/drafts/c686397e4a0f4f11683d"&gt;link-1&lt;/a&gt; も可能です。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Images - 画像埋め込み&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;![代替テキスト](画像のURL)&lt;/li&gt;
+&lt;li&gt;タイトル無しの画像を埋め込む&lt;/li&gt;
+&lt;li&gt;![代替テキスト](画像のURL &amp;quot;画像タイトル&amp;quot;)&lt;/li&gt;
+&lt;li&gt;タイトル有りの画像を埋め込む&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Markdown:&lt;/em&gt; ![Qiita](&lt;a href="http://qiita.com/icons/favicons/public/apple-touch-icon.png"&gt;http://qiita.com/icons/favicons/public/apple-touch-icon.png&lt;/a&gt; &amp;quot;Qiita&amp;quot;)
+&lt;em&gt;結果:&lt;/em&gt;
+&lt;img title="Qiita" alt="Qiita" src="http://qiita.com/icons/favicons/public/apple-touch-icon.png" /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;テーブル記法&lt;/h2&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |      column |    column    |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記のように書くと，以下のように表示されます．&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;Left align&lt;/th&gt;
+&lt;th style="text-align: right"&gt;Right align&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Center align&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;This&lt;/td&gt;
+&lt;td style="text-align: right"&gt;This&lt;/td&gt;
+&lt;td style="text-align: center"&gt;This&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;column&lt;/td&gt;
+&lt;td style="text-align: right"&gt;column&lt;/td&gt;
+&lt;td style="text-align: center"&gt;column&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;will&lt;/td&gt;
+&lt;td style="text-align: right"&gt;will&lt;/td&gt;
+&lt;td style="text-align: center"&gt;will&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;be&lt;/td&gt;
+&lt;td style="text-align: right"&gt;be&lt;/td&gt;
+&lt;td style="text-align: center"&gt;be&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;left&lt;/td&gt;
+&lt;td style="text-align: right"&gt;right&lt;/td&gt;
+&lt;td style="text-align: center"&gt;center&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;aligned&lt;/td&gt;
+&lt;td style="text-align: right"&gt;aligned&lt;/td&gt;
+&lt;td style="text-align: center"&gt;aligned&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2&gt;数式の挿入&lt;/h2&gt;
+
+&lt;p&gt;コードブロックの言語指定に &amp;quot;math&amp;quot; を指定することでTeX記法を用いて数式を記述することができます。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;```math
+\left( \sum&lt;em&gt;{k=1}^n a&lt;/em&gt;k b&lt;em&gt;k \right)^{!!2} \leq
+\left( \sum&lt;/em&gt;{k=1}^n a&lt;em&gt;k^2 \right) \left( \sum&lt;/em&gt;{k=1}^n b_k^2 \right)
+```&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;\left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
+\left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;$2^3$&lt;/code&gt; のように数式を &amp;quot;$&amp;quot; で挟むと行中に数式を埋め込むこともできます。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;x^2 + y^2 = 1 をインライン表示すると $x^2 + y^2 = 1$ になります。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ただしインライン数式の中でコントロールシンボル（&lt;code&gt;\{&lt;/code&gt;のような、バックスラッシュの後に記号が続くもの）を使うと、後述のバックスラッシュによるMarkdownのエスケープと衝突してしまいます。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$a = \{1, 2, 3\}$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$a = {1, 2, 3}$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;なので次のように二つのバックスラッシュを使います。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$a = \\{1, 2, 3\\}$
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$a = \{1, 2, 3\}$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;目次(TOC)の自動挿入&lt;/h2&gt;
+
+&lt;p&gt;目次は記事内の見出しを元に自動生成し、右上に自動挿入されます。詳細は&lt;a href="http://blog.qiita.com/post/77055935852/qiita-toc"&gt;目次機能の紹介記事&lt;/a&gt;をご覧ください。&lt;/p&gt;
+
+&lt;h2&gt;注釈&lt;/h2&gt;
+
+&lt;p&gt;本文中に&lt;code&gt;[^1]&lt;/code&gt;や&lt;code&gt;[^example]&lt;/code&gt;のように文字列を記述することで、脚注へのリンクを表現できます。注釈内容は、同じく本文中に &lt;code&gt;[^1]: ...&lt;/code&gt; というように記述します&lt;a href="注釈内容を記述する位置は、本文の途中でも末尾でも構いません。"&gt;^1&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2&gt;絵文字&lt;/h2&gt;
+
+&lt;p&gt;厳密には Markdown 記法の外ですが、&lt;code&gt;:&lt;/code&gt; で囲って、絵文字を埋め込めます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;\:kissing_closed_eyes: chu☆
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;:kissing&lt;em&gt;closed&lt;/em&gt;eyes: chu☆&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;絵文字チートシート
+&lt;a href="http://www.emoji-cheat-sheet.com/"&gt;http://www.emoji-cheat-sheet.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;その他&lt;/h2&gt;
+
+&lt;p&gt;バックスラッシュ[\]をMarkdownの前に挿入することで、Markdownをエスケープ(無効化)することができます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;# H1
+エスケープされています&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;また本文では一部のHTMLタグも利用可能です。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Example Article</title>
+    <link rel="alternate" href="http://blog.url.com/2012/01/01/example-article.html"/>
+    <id>http://blog.url.com/2012/01/01/example-article.html</id>
+    <published>2012-01-01T09:00:00+09:00</published>
+    <updated>2016-02-09T04:17:26+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;em&gt;View the &lt;a href="http://github.github.com/github-flavored-markdown/sample_content.html"&gt;source of this content&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s get the whole &amp;quot;linebreak&amp;quot; thing out of the way. The next paragraph contains two phrases separated by a single newline character:&lt;/p&gt;
+
+&lt;p&gt;Roses are red
+Violets are blue&lt;/p&gt;
+
+&lt;p&gt;The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:&lt;/p&gt;
+
+&lt;p&gt;Roses are red
+Violets are blue&lt;/p&gt;
+
+&lt;p&gt;Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform&lt;em&gt;complicated&lt;/em&gt;task or do&lt;em&gt;this&lt;/em&gt;and&lt;em&gt;do&lt;/em&gt;that&lt;em&gt;and&lt;/em&gt;another_thing.&lt;/p&gt;
+
+&lt;h2&gt;A bit of the GitHub spice&lt;/h2&gt;
+
+&lt;p&gt;In addition to the changes in the previous section, certain references are auto-linked:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2&lt;/li&gt;
+&lt;li&gt;User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2&lt;/li&gt;
+&lt;li&gt;User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2&lt;/li&gt;
+&lt;li&gt;#Num: #1&lt;/li&gt;
+&lt;li&gt;User/#Num: mojombo#1&lt;/li&gt;
+&lt;li&gt;User/Project#Num: mojombo/god#1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are dangerous goodies though, and we need to make sure email addresses don&amp;#39;t get mangled:&lt;/p&gt;
+
+&lt;p&gt;My email addy is &lt;a href="mailto:tom@github.com"&gt;tom@github.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Math is hard, let&amp;#39;s go shopping&lt;/h2&gt;
+
+&lt;p&gt;In first grade I learned that 5 &amp;gt; 3 and 2 &amp;lt; 7. Maybe some arrows. 1 -&amp;gt; 2 -&amp;gt; 3. 9 &amp;lt;- 8 &amp;lt;- 7.&lt;/p&gt;
+
+&lt;p&gt;Triangles man! a^2 + b^2 = c^2&lt;/p&gt;
+
+&lt;h2&gt;We all like making lists&lt;/h2&gt;
+
+&lt;p&gt;The above header should be an H2 tag. Now, for a list of fruits:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Red Apples&lt;/li&gt;
+&lt;li&gt;Purple Grapes&lt;/li&gt;
+&lt;li&gt;Green Kiwifruits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let&amp;#39;s get crazy:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; This is a list item with two paragraphs. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+mi posuere lectus.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;What about some code &lt;strong&gt;in&lt;/strong&gt; a list? That&amp;#39;s insane, right?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Ruby you can map like this:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;].map { |x| x.uppercase }&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In Rails, you can do a shortcut:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;[&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;].map(&amp;amp;:uppercase)&lt;/p&gt;
+
+&lt;p&gt;Some people seem to like definition lists&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Lower cost&lt;/dt&gt;
+&lt;dd&gt;The new version of this product costs significantly less than the previous one!&lt;/dd&gt;
+&lt;dt&gt;Easier to use&lt;/dt&gt;
+&lt;dd&gt;We've changed the product so that it's much easier to use!&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h2&gt;I am a robot&lt;/h2&gt;
+
+&lt;p&gt;Maybe you want to print &lt;code&gt;robot&lt;/code&gt; to the console 1000 times. Why not?&lt;/p&gt;
+
+&lt;p&gt;def robot_invasion
+puts(&amp;quot;robot &amp;quot; * 1000)
+end&lt;/p&gt;
+
+&lt;p&gt;You see, that was formatted as code because it&amp;#39;s been indented by four spaces.&lt;/p&gt;
+
+&lt;p&gt;How about we throw some angle braces and ampersands in there?&lt;/p&gt;
+
+&lt;div class="footer"&gt;
+&amp;copy; 2004 Foo Corporation
+&lt;/div&gt;
+
+&lt;h2&gt;Set in stone&lt;/h2&gt;
+
+&lt;p&gt;Preformatted blocks are useful for ASCII art:&lt;/p&gt;
+
+&lt;pre&gt;
+,-.
+,     ,-.   ,-.
+/ \   (   )-(   )
+\ |  ,.&gt;-(   )-&lt;
+\|,' (   )-(   )
+Y ___`-'   `-'
+|/__/   `-'
+|
+|
+|    -hrr-
+___|_____________
+&lt;/pre&gt;
+
+&lt;h2&gt;Playing the blame game&lt;/h2&gt;
+
+&lt;p&gt;If you need to blame someone, the best way to do so is by quoting them:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I, at any rate, am convinced that He does not throw dice.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Or perhaps someone a little less eloquent:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I wish you&amp;#39;d have given me this written question ahead of time so I
+could plan for it... I&amp;#39;m sure something will pop into my head here in
+the midst of this press conference, with all the pressure of trying to
+come up with answer, but it hadn&amp;#39;t yet...&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t want to sound like
+I have made no mistakes. I&amp;#39;m confident I have. I just haven&amp;#39;t - you
+just put me under the spot here, and maybe I&amp;#39;m not as quick on my feet
+as I should be in coming up with one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Table for two&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Rank&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;&lt;td&gt;Tom Preston-Werner&lt;/td&gt;&lt;td&gt;Awesome&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;2&lt;/td&gt;&lt;td&gt;Albert Einstein&lt;/td&gt;&lt;td&gt;Nearly as awesome&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;Crazy linking action&lt;/h2&gt;
+
+&lt;p&gt;I get 10 times more traffic from &lt;a title="Google" href="http://google.com/"&gt;Google&lt;/a&gt; than from
+&lt;a title="Yahoo Search" href="http://search.yahoo.com/"&gt;Yahoo&lt;/a&gt; or &lt;a title="MSN Search" href="http://search.msn.com/"&gt;MSN&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
