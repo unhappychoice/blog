@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2016/02/05/sample.html"/>
     <id>http://blog.url.com/2016/02/05/sample.html</id>
     <published>2016-02-05T09:00:00+09:00</published>
-    <updated>2016-02-09T04:17:26+09:00</updated>
+    <updated>2016-02-09T04:23:52+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -302,7 +302,7 @@ testtest // コメント
     <link rel="alternate" href="http://blog.url.com/2012/01/02/example-article2.html"/>
     <id>http://blog.url.com/2012/01/02/example-article2.html</id>
     <published>2012-01-02T09:00:00+09:00</published>
-    <updated>2016-02-09T04:17:26+09:00</updated>
+    <updated>2016-02-09T04:23:52+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -707,7 +707,7 @@ Gist側でコードを編集されても、 &lt;strong&gt;Qiitaには反映さ�
     <link rel="alternate" href="http://blog.url.com/2012/01/01/example-article.html"/>
     <id>http://blog.url.com/2012/01/01/example-article.html</id>
     <published>2012-01-01T09:00:00+09:00</published>
-    <updated>2016-02-09T04:17:26+09:00</updated>
+    <updated>2016-02-09T04:23:52+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
