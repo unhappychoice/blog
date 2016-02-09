@@ -1,0 +1,15 @@
+machine:
+  ruby:
+    version: 2.2.2
+  pre:
+    - "git config --global user.name 'Circle CI'"
+    - "git config --global user.email 'unhappychoice@gmail.com'"
+compile:
+  override:
+    - bundle exec middleman build
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - "scripts/deploy.sh"
