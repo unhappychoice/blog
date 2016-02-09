@@ -37,8 +37,6 @@ configure :build do
   activate :minify_javascript
   activate :gzip
   activate :minify_html
-  activate :asset_hash
-  activate :asset_host, host: '//unhappychoice.github.io/blog'
 end
 
 configure :server do
