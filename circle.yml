@@ -7,7 +7,9 @@ machine:
 compile:
   override:
     - bundle exec middleman build
-
+test:
+  override:
+    - echo "No test"
 deployment:
   master:
     branch: master
