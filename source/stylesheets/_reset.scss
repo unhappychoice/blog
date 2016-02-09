@@ -33,6 +33,10 @@ h2 {
 
 h3 {
   font-size: 20px;
+  border-left: 4px solid rgba(0, 0, 0, .3);
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
+  padding-left: 8px;
+  padding-bottom: 6px;
 }
 
 h4 {
@@ -44,12 +48,16 @@ h5 {
 }
 
 p, ul, ol {
-  margin: 0 0 $middle-space;
+  margin: $middle-space 0 $middle-space;
   line-height: 1.8;
 }
 
+ul, ol {
+  padding-left: 20px;
+}
+
 li {
-  margin: 0 0 $space;
+  margin: 0 0 $small-space;
 }
 
 blockquote {

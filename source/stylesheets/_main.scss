@@ -102,8 +102,10 @@ body {
   h3 {
     margin-right: $large-space;
     margin-left: $large-space;
+    padding-left: 0;
     padding-bottom: $space;
     font-size: 16px;
+    border-left: none;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
     box-shadow: rgba(255, 255, 255, .1) 0 1px 0;
   }
