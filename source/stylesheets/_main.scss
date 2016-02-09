@@ -1,3 +1,6 @@
+body {
+  background: $color-deep;
+}
 #main {
   padding: $large-space;
   color: $color-deep;
@@ -80,17 +83,20 @@
 
 #sidebar {
   z-index: 1001;
-  padding: 30px 0;
+  width: 100%;
   color: $color-light;
   background: $color-deep;
-  transition: width 0.08s ease-in-out;
-
   @media only screen and (min-width:768px) {
     float: left;
     height: 100%;
-    width: 0;
     min-height: 100%;
+    width: 0;
+    padding: 15px 0;
     overflow: scroll;
+    transition: width 0.08s ease-in-out;
+    &.collapse {
+      display: block;
+    }
   }
 
   h3 {
@@ -148,5 +154,19 @@
   }
   &:hover {
     background: lighten($color-dark, 10);
+  }
+}
+.mobile-toggle-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: $color-light;
+  &.collapsed {
+    color: $color-deep;
+  }
+  @media only screen and (min-width:768px) {
+    display: none;
   }
 }

@@ -20,8 +20,12 @@ html
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
     body
+      button.mobile-toggle-menu.collapsed type="button" data-toggle="collapse" data-target="#sidebar"
+        span.fa.fa-bars
+
       button.toggle-menu type="button"
         span.fa.fa-bars
+
       = partial :sidebar, locals: { blog: blog }
       #main role="main"
         .content

@@ -1,4 +1,7 @@
 $ ->
+  if $(document).width() < 768
+    return
+
   if $.cookie('menu-bar') == 'true'
     $('#sidebar').css('width', '300px')
     $('#sidebar').css('transition', 'none')
