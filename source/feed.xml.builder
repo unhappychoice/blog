@@ -1,8 +1,8 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  site_url = "http://blog.url.com/"
-  xml.title "Blog Name"
-  xml.subtitle "Blog subtitle"
+  site_url = "http://blog.unhappychoice.com"
+  xml.title "unhappychoice.com"
+  xml.subtitle "unhappychoiceの日常やプログラミングなど"
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, current_page.path), "rel" => "self"
