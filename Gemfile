@@ -5,6 +5,7 @@ gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-syntax"
 gem "middleman-minify-html"
+gem "middleman-ogp", github: 'unhappychoice/middleman-ogp'
 gem "slim"
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem "builder", "~> 3.0"
