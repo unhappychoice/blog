@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/unhappychoice/middleman-ogp.git
-  revision: 3649bfcf89762a0cacaca696bddfddbfcd286bb2
+  revision: 2638b8ca5125ae30e16f01ff1a700bb3f23988b8
   specs:
     middleman-ogp (1.0.4)
       middleman-core (>= 3.2)
@@ -15,7 +15,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    backports (3.6.7)
+    backports (3.6.8)
     builder (3.2.2)
     capybara (2.5.0)
       mime-types (>= 1.16)
@@ -50,9 +50,9 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     kramdown (1.9.0)
-    listen (3.0.5)
+    listen (3.0.6)
       rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
+      rb-inotify (>= 0.9.7)
     mgd (0.1.0)
       middleman (>= 3.0.0)
       trollop (= 2.1.2)
@@ -118,7 +118,7 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rb-fsevent (0.9.7)
-    rb-inotify (0.9.5)
+    rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     redcarpet (3.3.4)
     rouge (1.10.1)

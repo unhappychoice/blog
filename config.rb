@@ -28,6 +28,13 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end
+activate :ogp do |ogp|
+  ogp.namespaces = {
+    fb: data.ogp.fb,
+    og: data.ogp.og,
+    twitter: data.ogp.twitter
+  }
+end
 
 helpers do
 end

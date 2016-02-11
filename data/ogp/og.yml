@@ -1,0 +1,9 @@
+title: "unhappychoice.com | Blog"
+site_name: "blog.unhappychoice.com"
+locale: "ja_JP"
+type: "website"
+description: 'A blog written by unhappychoice'
+image:
+  '': "https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=500"
+  width: 500
+  height: 500
