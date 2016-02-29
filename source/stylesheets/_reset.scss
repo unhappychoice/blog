@@ -26,17 +26,17 @@ h1 {
 
 h2 {
   font-size: 22px;
-  padding-bottom: $space;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding-left: 8px;
+  padding-bottom: 6px;
+  border-left: 4px solid rgba(0, 0, 0, .3);
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
   box-shadow:  0 1px 0 rgba(255, 255, 255, 1);
 }
 
 h3 {
   font-size: 20px;
-  border-left: 4px solid rgba(0, 0, 0, .3);
-  border-bottom: 1px solid rgba(0, 0, 0, .4);
-  padding-left: 8px;
-  padding-bottom: 6px;
+  padding-bottom: $space;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 h4 {
@@ -61,8 +61,13 @@ li {
 }
 
 blockquote {
+  padding: 5px $space;
   font-size: 14px;
   border-color: #dedede;
+  color: darken($color-light, 40);
+  p {
+    margin: 0;
+  }
 }
 
 a {

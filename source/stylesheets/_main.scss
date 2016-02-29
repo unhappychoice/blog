@@ -19,7 +19,13 @@ body {
       margin-bottom: $large-space * 2;
     }
   }
-
+  article {
+    img {
+      max-width: 100%;
+      margin: $middle-space auto;
+      border-radius: 15px;
+    }
+  }
   .title {
     margin-top: -40px;
     margin-bottom: 40px;
@@ -73,12 +79,16 @@ body {
     margin-top: $large-space * 2;
   }
   .prev {
-    margin-top: $middle-space;
     float: left;
+    @media only screen and (min-width:768px) {
+      margin-top: $middle-space;
+    }
   }
   .next {
-    margin-top: $middle-space;
     float: right;
+    @media only screen and (min-width:768px) {
+      margin-top: $middle-space;
+    }
   }
 }
 

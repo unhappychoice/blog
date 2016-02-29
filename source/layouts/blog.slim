@@ -16,6 +16,7 @@
     li= link_to("#{current_page.date.year}年", blog_year_path(current_page.date.year))
     li= link_to("#{current_page.date.month}月", blog_month_path(current_page.date.year, current_page.date.month))
     li= link_to("#{current_page.date.day}日", blog_day_path(current_page.date.year, current_page.date.month, current_page.date.day))
+    li= current_page.title
   h2.article-title= current_page.title
   .meta
     .time
