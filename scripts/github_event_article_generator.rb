@@ -16,7 +16,7 @@ require_relative './github_article_generator/generator'
 article_date = Time.now.in_time_zone('Asia/Tokyo').beginning_of_month.strftime('%Y-%m-%d')
 article_path = "#{File.expand_path('../../source/articles', __FILE__)}/#{article_date}-github-activity.html.md"
 
-`git checkout master`
+`git checkout article_generator`
 `git pull`
 `git checkout -b #{article_date}-github-activity`
 
