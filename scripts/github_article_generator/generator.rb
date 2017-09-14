@@ -1,11 +1,13 @@
 class Generator
   def run
-    repositories = JSON.parse(request('https://api.github.com/users/unhappychoice/repos?per_page=300&sort=updated').body)
+    github = Github.new oauth_token: ENV['GITHUB_TOKEN']
+
+    repositories = github.repos.list('unhappychoice').body
       .select { |e| e['created_at'].prev_month? }
       .map { |e| Repository.new(e) }
       .group_by(&:repository_name)
 
-    events = JSON.parse(request('https://api.github.com/users/unhappychoice/events?per_page=300').body)
+    events = github.activity.events.list_user_performed('unhappychoice', per_page: 300).body
 
     pull_requests = events
       .select { |e| e['type'] == 'PullRequestEvent' && e['payload']['action'] == 'opened' }
@@ -40,15 +42,6 @@ READMORE
   end
 
   private
-
-  def request(url)
-    header = { 'Authorization' => "token #{ENV['GITHUB_TOKEN']}" }
-    uri = URI.parse(url)
-
-    Net::HTTP.start(uri.hostname, uri.port, :use_ssl => uri.scheme == 'https') do |http|
-      http.request_get(uri, header)
-    end
-  end
 
   def pull_requests_string(pull_requests)
     return '' if pull_requests.empty?
