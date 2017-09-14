@@ -1,0 +1,19 @@
+decrypt:
+  rubygems.yml: repo/rubygems.yml.asc
+release:
+  script: |-
+    git config --global user.email "test@example.com"
+    git config --global user.name "Test"
+    ./test.sh
+    rm -rf *.gem
+    sed -i "s/1.0.snapshot/${tag}/g" mgd.gemspec
+    gem build mgd.gemspec
+    chmod 0600 ../rubygems.yml
+    gem push *.gem --config-file ../rubygems.yml
+  commanders:
+  - hovancik
+architect:
+- hovancik
+merge:
+  commanders: []
+deploy: {}
