@@ -1,6 +1,6 @@
 machine:
   ruby:
-    version: 2.2.2
+    version: 2.3.4
   pre:
     - "git config --global user.name 'Circle CI'"
     - "git config --global user.email 'unhappychoice@gmail.com'"
