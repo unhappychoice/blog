@@ -9,7 +9,7 @@ class Generator
       .map { |e| Repository.new(e) }
       .group_by(&:repository_name)
 
-    events = github.activity.events.list_user_performed('unhappychoice', per_page: 300).body
+    events = github.activity.events.list_user_performed('unhappychoice', per_page: 300, auto_pagination: true)
 
     pull_requests = events
       .select { |e| e['type'] == 'PullRequestEvent' && e['payload']['action'] == 'opened' }
