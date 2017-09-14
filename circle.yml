@@ -15,3 +15,7 @@ deployment:
     branch: master
     commands:
       - "scripts/deploy.sh"
+  generate:
+    branch: github-article-generator
+    commands:
+      - "bundle exec ruby scripts/github_event_article_generator.rb"
