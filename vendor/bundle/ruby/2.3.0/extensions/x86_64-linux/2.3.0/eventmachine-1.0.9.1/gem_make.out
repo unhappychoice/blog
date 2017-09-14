@@ -1,0 +1,20 @@
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.3.0/gems/eventmachine-1.0.9.1/ext/fastfilereader
+/home/ubuntu/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20170914-13728-129rdcq.rb extconf.rb
+creating Makefile
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.3.0/gems/eventmachine-1.0.9.1/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.3.0/gems/eventmachine-1.0.9.1/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+compiling rubymain.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+linking shared-object fastfilereaderext.so
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.3.0/gems/eventmachine-1.0.9.1/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -m 0755 fastfilereaderext.so ./.gem.20170914-13728-6ef559

@@ -1,0 +1,13 @@
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/json-1.8.3/ext/json
+/home/ubuntu/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20170914-12543-1qzu67b.rb extconf.rb
+creating Makefile
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/json-1.8.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/json-1.8.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/json-1.8.3/ext/json
+make "DESTDIR=" install

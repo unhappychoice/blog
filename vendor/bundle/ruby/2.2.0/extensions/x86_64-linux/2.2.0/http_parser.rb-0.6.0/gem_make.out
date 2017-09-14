@@ -1,0 +1,47 @@
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/home/ubuntu/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20170914-12543-3b3gce.rb extconf.rb
+creating Makefile
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+ruby_http_parser.c: In function ‘on_message_begin’:
+ruby_http_parser.c:108:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE ret = Qnil;
+   ^
+ruby_http_parser.c: In function ‘on_header_value’:
+ruby_http_parser.c:146:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   int new_field = 0;
+   ^
+ruby_http_parser.c: In function ‘on_headers_complete’:
+ruby_http_parser.c:192:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE ret = Qnil;
+   ^
+ruby_http_parser.c: In function ‘on_body’:
+ruby_http_parser.c:213:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE ret = Qnil;
+   ^
+ruby_http_parser.c: In function ‘on_message_complete’:
+ruby_http_parser.c:232:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   VALUE ret = Qnil;
+   ^
+ruby_http_parser.c: In function ‘Parser_execute’:
+ruby_http_parser.c:314:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   char *ptr = RSTRING_PTR(data);
+   ^
+ruby_http_parser.c:320:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   size_t nparsed = ryah_http_parser_execute(&wrapper->parser, &settings, ptr, len);
+   ^
+ruby_http_parser.c: In function ‘Parser_set_header_value_type’:
+ruby_http_parser.c:451:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   ParserWrapper *wrapper = NULL;
+   ^
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/ubuntu/blog/vendor/bundle/ruby/2.2.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ruby_http_parser.so ./.gem.20170914-12543-1x905x9
