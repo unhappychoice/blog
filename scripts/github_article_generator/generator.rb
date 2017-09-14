@@ -1,3 +1,5 @@
+require 'erb'
+
 class Generator
   def run
     github = Github.new oauth_token: ENV['GITHUB_TOKEN']
@@ -21,44 +23,12 @@ class Generator
       .map { |e| Release.new(e) }
       .group_by(&:repository_name)
 
-    string = repositories.merge(pull_requests).merge(releases)
+    all_repositories = repositories.merge(pull_requests).merge(releases)
       .keys
       .uniq
       .sort
       .map { |name| repositories[name]&.first || pull_requests[name]&.first&.repository || releases[name]&.first&.repository }
-      .map { |r| repository_string(r,pull_requests[r.title] || [],releases[r.title] || []) }
-      .join("\n")
 
-    <<-"EOS"
----
-title: My Github activity in #{Time.now.in_time_zone('Asia/Tokyo').prev_month.strftime('%Y / %m')}
-tags: github
----
-
-READMORE
-
-#{string}
-    EOS
-  end
-
-  private
-
-  def pull_requests_string(pull_requests)
-    return '' if pull_requests.empty?
-    "##### 📁　Pull requests\n" + pull_requests.map(&:to_pretty_s).join("\n") + "\n"
-  end
-
-  def release_string(releases)
-    return '' if releases.empty?
-    "##### 🎉　Releases\n" + releases.map(&:to_pretty_s).join("\n") + "\n"
-  end
-
-  def repository_string(repository, pull_requests, releases)
-    <<-EOS
-### [#{repository.title}](#{repository.url})
-#{"\n- 🎉　Created repository (#{repository.created_at.to_time_string})" if pull_requests.empty? && releases.empty?}
-#{pull_requests_string(pull_requests)}
-#{release_string(releases)}
-    EOS
+    ERB.new(IO.read(File.expand_path('../template/article.md.erb', __FILE__))).result(binding)
   end
 end
