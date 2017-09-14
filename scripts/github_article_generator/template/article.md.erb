@@ -1,0 +1,30 @@
+---
+title: My Github activity in <%= Time.now.in_time_zone('Asia/Tokyo').prev_month.strftime('%Y / %m') %>
+tags: github
+---
+
+READMORE
+
+<% all_repositories.each do |repository| %>
+
+### [<%= repository.title %>](<%= repository.url %>)
+
+<% prs = pull_requests[repository.title] || []%>
+<% rs = releases[repository.title] || []%>
+
+<% if prs.empty? && rs.empty? %>
+<%= "- 🎉　Created repository (#{repository.created_at.to_time_string})" %>
+<% end %>
+
+<% unless prs.empty? %>
+##### 📁　Pull requests
+
+<%= prs.map(&:to_pretty_s).join("\n") %>
+<% end %>
+
+<% unless rs.empty? %>
+##### 🎉　Releases
+
+<%= rs.map(&:to_pretty_s).join("\n")  %>
+<% end %>
+<% end %>

@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~> 4.0.0"
-gem "middleman-blog"
-gem "middleman-livereload"
-gem "middleman-syntax"
-gem "middleman-minify-html"
-gem "middleman-ogp", github: 'unhappychoice/middleman-ogp'
-gem "slim"
+gem 'middleman', '~> 4.0.0'
+gem 'middleman-blog'
+gem 'middleman-livereload'
+gem 'middleman-syntax'
+gem 'middleman-minify-html'
+gem 'middleman-ogp', github: 'unhappychoice/middleman-ogp'
+gem 'slim'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
-gem "builder", "~> 3.0"
-gem "mgd"
+gem 'builder', '~> 3.0'
+gem 'mgd'
+gem 'activesupport'
+gem 'github_api'
