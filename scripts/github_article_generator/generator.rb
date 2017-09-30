@@ -6,6 +6,7 @@ class Generator
 
     repositories = github.repos.list('unhappychoice').body
       .select { |e| e['created_at'].prev_month? }
+      .select { |e| e['repo']['name'].include?('unhappychoice') }
       .map { |e| Repository.new(e) }
       .group_by(&:repository_name)
 
