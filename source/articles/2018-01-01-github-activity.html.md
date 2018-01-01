@@ -11,6 +11,8 @@ READMORE
 
 12月は仕事関連のコミットが多かった1ヶ月で、OSSとしてはbitFlyerのSPAクライアントをCycle.jsで作ったくらい。
 
+### cycle-flyer
+
 [cycle-flyer](https://cycle-flyer.now.sh)
 [<img class="square" src="/images/2018-01-01-github/cycle-flyer.png" 
 alt="cycle-flyer"/>](/images/2018-01-01-github/cycle-flyer.png)
@@ -32,7 +34,7 @@ APIより遅延しているようで、サーバーステータスがBusy以上�
 
 ### [unhappychoice/cycle-flyer](https://github.com/unhappychoice/cycle-flyer)
 
-- 🎉　Created repository (12/09)
+- 🎉 Created repository (12/09)
 
 
 
