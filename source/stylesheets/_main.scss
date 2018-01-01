@@ -28,6 +28,9 @@ body {
       margin: $middle-space auto;
       border-radius: 15px;
     }
+    img.square {
+      border-radius: 0;
+    }
   }
   .title {
     margin-top: -40px;
