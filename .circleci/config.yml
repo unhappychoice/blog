@@ -1,0 +1,70 @@
+version: 2
+
+bundle_install: &bundle_install
+  run:
+    name: bundle install
+    command: bundle install --path vendor/bundle
+
+restore_bundle_cache: &restore_bundle_cache
+  restore_cache:
+    key: cache-blog-{{ checksum "Gemfile.lock" }}
+
+jobs:
+  build:
+    working_directory: ~/blog
+    docker:
+      - image: circleci/ruby:2.5.3-node
+    steps:
+      - checkout
+      - *restore_bundle_cache
+      - *bundle_install
+      - run:
+          name: build
+          command: bundle exec middleman build
+      - save_cache:
+          key: cache-blog-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+  deployment:
+    working_directory: ~/blog
+    docker:
+      - image: circleci/ruby:2.5.3-node
+    steps:
+      - checkout
+      - *restore_bundle_cache
+      - *bundle_install
+      - run:
+          name: build
+          command: bundle exec middleman build
+      - run:
+          name: setup git
+          command: git config --global user.name 'Circle CI' && git config --global user.email 'unhappychoice@gmail.com'
+      - run:
+          name: deploy
+          command: scripts/deploy.sh
+  generate:
+    working_directory: ~/blog
+    docker:
+      - image: circleci/ruby:2.5.3-node
+    steps:
+      - checkout
+      - *restore_bundle_cache
+      - *bundle_install
+      - run:
+          name: generate
+          command: bundle exec ruby scripts/github_event_article_generator.rb
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deployment:
+          filters:
+            branches:
+              only: master
+          requires: [build]
+      - generate:
+          filters:
+            branches:
+              only: github-article-generator
+          requires: [build]

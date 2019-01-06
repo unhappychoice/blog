@@ -1,3 +1,5 @@
+require 'active_support/all'
+
 Time.zone = 'Tokyo'
 
 set :markdown_engine, :redcarpet
