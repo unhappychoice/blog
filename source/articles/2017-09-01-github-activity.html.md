@@ -4,13 +4,13 @@ tags: github
 ---
 
 [OSS コントリビューションや GitHub 上のアクティビティのまとめレポート投稿を自動化する | log.sugarshin.net](https://log.sugarshin.net/2017/05/07/automation-monthly-report)
-のアイデアを ~~盗んで~~ 参考にして今月から自動で記事作成するようにしました。 ただし、投稿まで自動化はせずPR作成後コメント書いてマージするようにしています。
+のアイデアを ~~盗んで~~ 参考にして今月から自動で記事作成するように。 ただし、投稿まで自動化はせずPR作成後コメント書いてマージするように。
 
 READMORE
 
 ## Comment
 
-もう9月も半分過ぎちゃいましたが、8月分。
+もう9月も半分過ぎちゃったが、8月分。
 
 RubyGemで生成される ContributorCovenant にTypo発見したため、律儀にPR。 [Owner](https://github.com/CoralineAda)がなんか不思議な人であった。
 
