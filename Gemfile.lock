@@ -107,10 +107,13 @@ GEM
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
+    nokogiri (1.10.3)
+      mini_portile2 (~> 2.4.0)
     oauth2 (1.4.1)
       faraday (>= 0.8, < 0.16.0)
       jwt (>= 1.0, < 3.0)
@@ -165,6 +168,7 @@ DEPENDENCIES
   middleman-minify-html
   middleman-ogp!
   middleman-syntax
+  nokogiri
   redcarpet (~> 3.3, >= 3.3.3)
   slim
 
