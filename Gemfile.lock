@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/unhappychoice/middleman-ogp.git
-  revision: 2638b8ca5125ae30e16f01ff1a700bb3f23988b8
+  revision: 6ab3b4333d3f3c5b26ad013969f259b2b85d95fd
   specs:
-    middleman-ogp (1.0.4)
+    middleman-ogp (1.2.0)
       middleman-core (>= 3.2)
 
 GEM
