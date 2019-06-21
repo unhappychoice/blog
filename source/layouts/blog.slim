@@ -28,7 +28,7 @@
         = link_to("#{tag} ", tag_path(tag))
   article
     == yield
-  - if current_article.next_article
-    .next= link_to("次の記事へ", current_article.next_article.url)
-  - if current_article.previous_article
-    .prev= link_to("前の記事へ", current_article.previous_article.url)
+  - if current_article.article_next
+    .next= link_to("次の記事へ", current_article.article_next.url)
+  - if current_article.article_previous
+    .prev= link_to("前の記事へ", current_article.article_previous.url)
