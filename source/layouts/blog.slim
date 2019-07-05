@@ -21,7 +21,7 @@
   .meta
     .time
       span.fa.fa-clock-o
-      = current_page.date.strftime('%x')
+      = current_page.date.strftime('%F')
     .tags
       span.fa.fa-tag
       - current_page.tags.each do |tag|

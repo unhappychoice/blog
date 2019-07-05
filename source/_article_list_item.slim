@@ -4,7 +4,7 @@
   .meta
     .time
       span.fa.fa-clock-o
-      = article.date.strftime('%x')
+      = article.date.strftime('%F')
     .tags
       span.fa.fa-tag
       - article.tags.each do |tag|
