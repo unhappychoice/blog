@@ -4,7 +4,7 @@ class Generator
   def run
     github = Github.new oauth_token: ENV['GITHUB_TOKEN']
 
-    repositories = github.repos.list('unhappychoice').body
+    repositories = github.repos.list('unhappychoice', per_page: 100).body
       .select { |e| e['created_at'].prev_month? }
       .select { |e| e['full_name'].include?('unhappychoice') }
       .map { |e| Repository.new(e) }
