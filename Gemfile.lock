@@ -131,15 +131,13 @@ GEM
     rack (2.0.7)
     rack-livereload (0.3.17)
       rack
-    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     redcarpet (3.5.0)
     rouge (3.6.0)
-    sassc (2.0.1)
+    sassc (2.2.1)
       ffi (~> 1.9)
-      rake
     servolux (0.13.0)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
