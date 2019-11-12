@@ -36,7 +36,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     fast_blank (1.0.0)
     fastimage (2.1.7)
-    ffi (1.11.1)
+    ffi (1.11.2)
     github_api (0.18.2)
       addressable (~> 2.4)
       descendants_tracker (~> 0.0.4)
