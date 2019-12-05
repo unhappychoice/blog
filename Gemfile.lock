@@ -58,7 +58,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    memoist (0.16.1)
+    memoist (0.16.2)
     mgd (0.2.0)
       middleman (>= 3.0.0)
       trollop (= 2.1.2)
