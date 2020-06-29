@@ -13,7 +13,7 @@ jobs:
   build:
     working_directory: ~/blog
     docker:
-      - image: circleci/ruby:2.5.3-node
+      - image: circleci/ruby:2.6.3-node
     steps:
       - checkout
       - *restore_bundle_cache
@@ -28,7 +28,7 @@ jobs:
   deployment:
     working_directory: ~/blog
     docker:
-      - image: circleci/ruby:2.5.3-node
+      - image: circleci/ruby:2.6.3-node
     steps:
       - checkout
       - *restore_bundle_cache
@@ -45,7 +45,7 @@ jobs:
   generate:
     working_directory: ~/blog
     docker:
-      - image: circleci/ruby:2.5.3-node
+      - image: circleci/ruby:2.6.3-node
     steps:
       - checkout
       - *restore_bundle_cache
