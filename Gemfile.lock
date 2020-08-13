@@ -54,7 +54,8 @@ GEM
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jwt (2.2.1)
-    kramdown (1.17.0)
+    kramdown (2.3.0)
+      rexml
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -62,19 +63,19 @@ GEM
     mgd (0.2.0)
       middleman (>= 3.0.0)
       trollop (= 2.1.2)
-    middleman (4.3.7)
+    middleman (4.3.8)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
-      kramdown (~> 1.2)
-      middleman-cli (= 4.3.7)
-      middleman-core (= 4.3.7)
+      kramdown (>= 2.3.0)
+      middleman-cli (= 4.3.8)
+      middleman-core (= 4.3.8)
     middleman-blog (4.0.3)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
-    middleman-cli (4.3.7)
+    middleman-cli (4.3.8)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.3.7)
+    middleman-core (4.3.8)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
       backports (~> 3.6)
@@ -135,6 +136,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.0)
+    rexml (3.2.4)
     rouge (3.22.0)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -160,7 +162,7 @@ DEPENDENCIES
   builder (~> 3.2)
   github_api
   mgd
-  middleman (~> 4.3.7)
+  middleman (~> 4.3.8)
   middleman-blog
   middleman-livereload
   middleman-minify-html
