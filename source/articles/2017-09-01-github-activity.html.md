@@ -1,6 +1,6 @@
 ---
 title: My Github activity in 2017 / 08
-tags: github
+tags: github,programming
 ---
 
 [OSS コントリビューションや GitHub 上のアクティビティのまとめレポート投稿を自動化する | log.sugarshin.net](https://log.sugarshin.net/2017/05/07/automation-monthly-report)

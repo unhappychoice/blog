@@ -5,7 +5,7 @@ aside#sidebar
       li = "#{link_to(article.title, article)}"
   h3 タグ
   ol
-    - blog.tags.each do |tag, articles|
+    - blog.tags.sort_by { |_, articles| articles.count }.reverse.each do |tag, articles|
       li
         a href="#{tag_path(tag)}"
           span.badge= "#{articles.count}"

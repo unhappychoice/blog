@@ -1,6 +1,6 @@
 ---
 title: My Github activity in 2019 / 08
-tags: github
+tags: github,programming
 ---
 
 復活

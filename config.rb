@@ -3,7 +3,7 @@ require 'active_support/all'
 Time.zone = 'Tokyo'
 
 set :markdown_engine, :redcarpet
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
+set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, footnotes: true
 set :relative_links, true
 
 page '/*.xml', layout: false
