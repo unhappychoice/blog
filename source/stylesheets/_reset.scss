@@ -6,45 +6,46 @@ html, body {
   max-width: 100%;
   overflow: auto;
   overflow-x: hidden;
+
   .row {
     height: 100%;
     min-height: 100%;
   }
 }
 
-h1, h2, h3, h4, h5 {
-  margin: $middle-space 0 $space;
-  font-weight: 400;
-}
-
 h1 {
-  font-size: 26px;
+  margin: $large-space * 2 0 $middle-space;
   padding-bottom: $space;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
-  box-shadow:  0 1px 0 rgba(255, 255, 255, 1);
+  font-weight: 600;
+  font-size: 26px;
+  border-bottom: 1px solid $color-border;
 }
 
 h2 {
+  margin: $large-space * 2 0 $middle-space;
+  padding-bottom: 10px;
+  font-weight: 600;
   font-size: 22px;
-  padding-left: 8px;
-  padding-bottom: 6px;
-  border-left: 4px solid rgba(0, 0, 0, .3);
-  border-bottom: 1px solid rgba(0, 0, 0, .4);
-  box-shadow:  0 1px 0 rgba(255, 255, 255, 1);
+  border-bottom: 1px solid $color-border;
 }
 
 h3 {
-  font-size: 20px;
-  padding-bottom: $space;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  margin: $large-space 0 $middle-space;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 18px;
+  margin: $middle-space 0 $middle-space;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 h5 {
+  margin: $middle-space 0 $middle-space;
   font-size: 16px;
+  font-weight: 500;
 }
 
 p, ul, ol {
@@ -63,18 +64,20 @@ li {
 blockquote {
   padding: 5px $space;
   font-size: 14px;
-  border-color: #dedede;
-  color: darken($color-light, 40);
+  border-color: $color-font-light;
+  color: $color-font-light;
+
   p {
     margin: 0;
   }
 }
 
 a {
-  color: darken($color-light, 40);
+  color: $color-font-light;
+  transition: color 0.1s ease-in-out;
+
   &:hover {
-    color: $color-middle;
+    color: $color-font;
     text-decoration: none;
   }
-  transition: color 0.1s ease-in-out
 }

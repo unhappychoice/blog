@@ -3,18 +3,10 @@ pageable: true
 per_page: 10
 ---
 
-= partial :title
-
 ol.breadcrumb
   li TOP
 
 - page_articles.each_with_index do |article, i|
-  = partial :article_list_item, locals: { article: article }
+  = partial 'shared/article_list_item', locals: { article: article }
 
-- if paginate
-  .paginater
-    - if num_pages > 1
-      - if prev_page
-        p= link_to '前へ', prev_page
-      - if next_page
-        p= link_to '次へ', next_page
+= partial 'shared/paginator'

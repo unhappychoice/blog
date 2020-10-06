@@ -6,7 +6,7 @@ html
     meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" /
     meta content="width=device-width, initial-scale=1" name="viewport" /
     = ogp_tags { |property, content| property.include?('twitter') ? concat_content(tag(:meta, name: property, property: content)) : concat_content(tag(:meta, property: property, content: content)) }
-    = partial :ga
+    = partial 'shared/ga'
 
     link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity=("sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==") rel="stylesheet" /
     link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css"
@@ -22,13 +22,9 @@ html
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
     body
-      button.mobile-toggle-menu.collapsed type="button" data-toggle="collapse" data-target="#sidebar"
-        span.fa.fa-bars
-
-      button.toggle-menu type="button"
-        span.fa.fa-bars
-
-      = partial :sidebar, locals: { blog: blog }
       #main role="main"
         .content
+          = partial 'shared/title'
           = yield
+
+      = partial 'shared/sidebar', locals: { blog: blog }

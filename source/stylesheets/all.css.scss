@@ -1,13 +1,17 @@
-$large-space: 50px;
-$middle-space: 30px;
-$space: 15px;
-$small-space: 10px;
+$large-space: 48px;
+$middle-space: 24px;
+$space: 16px;
+$small-space: 8px;
 
-$color-deep: #1f2223;
-$color-dark: #3c4343;
-$color-middle: #22527f;
-$color-normal: #4e94ce;
-$color-light: #f5f5f5;
+$color-deep: #112A33;
+$color-dark: #357C96;
+$color-middle: #3A6BA5;
+$color-light: #FDFDFD;
+$color-font: rgba(0, 0, 0, .87);
+$color-font-light: rgba(0, 0, 0, .48);
+$color-font-inv: rgba(255, 255, 255, .87);
+$color-font-inv-light: rgba(255, 255, 255, .48);
+$color-border: rgba(0, 0, 0, .24);
 
 @import 'reset';
 @import 'main';
