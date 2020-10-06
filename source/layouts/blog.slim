@@ -1,15 +1,4 @@
 = wrap_layout :layout do
-  h1.title
-    img src="https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=100"
-    .icons
-      a href="https://github.com/unhappychoice"
-        span.fa.fa-github
-      a href="https://www.facebook.com/profile.php?id=100008274691739"
-        span.fa.fa-facebook-square
-      a href="https://www.linkedin.com/in/yuji-ueki-4a17a5101"
-        span.fa.fa-linkedin
-    | unhappychoice.com
-
   ol.breadcrumb
     li
       a href="/" TOP
@@ -17,18 +6,22 @@
     li= link_to("#{current_page.date.month}月", blog_month_path(current_page.date.year, current_page.date.month))
     li= link_to("#{current_page.date.day}日", blog_day_path(current_page.date.year, current_page.date.month, current_page.date.day))
     li= current_page.title
-  h2.article-title= current_page.title
-  .meta
-    .time
-      span.fa.fa-clock-o
-      = current_page.date.strftime('%F')
-    .tags
-      span.fa.fa-tag
-      - current_page.tags.each do |tag|
-        = link_to("#{tag} ", tag_path(tag))
-  article
-    == yield
-  - if current_article.article_next
-    .next= link_to("次の記事へ", current_article.article_next.url)
-  - if current_article.article_previous
-    .prev= link_to("前の記事へ", current_article.article_previous.url)
+
+  article.article
+    h2.article__title= current_page.title
+    .meta
+      .time
+        span.fa.fa-clock-o
+        = current_page.date.strftime('%F')
+      .tags
+        span.fa.fa-tag
+        - current_page.tags.each do |tag|
+          = link_to("#{tag} ", tag_path(tag))
+    .article__content
+      == yield
+
+  .paginator
+    - if current_article.article_previous
+      .paginator__prev= link_to("前の記事へ", current_article.article_previous.url)
+    - if current_article.article_next
+      .paginator__next= link_to("次の記事へ", current_article.article_next.url)

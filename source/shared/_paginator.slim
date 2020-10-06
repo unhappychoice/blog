@@ -1,0 +1,6 @@
+- if paginate && num_pages > 1
+  .paginator
+    - if prev_page
+      .paginator__prev = link_to '前の10件', prev_page
+    - if next_page
+      .paginator__next = link_to '次の10件', next_page

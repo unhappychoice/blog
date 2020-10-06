@@ -1,6 +1,5 @@
 .article
-  h2
-    = link_to article.title, article
+  h2.article__title = article.title
   .meta
     .time
       span.fa.fa-clock-o
@@ -9,5 +8,6 @@
       span.fa.fa-tag
       - article.tags.each do |tag|
         = link_to("#{tag} ", tag_path(tag))
-  = article.summary
-  = link_to 'もっと読む', article
+  .article__content
+    = article.summary
+    = link_to 'もっと読む', article

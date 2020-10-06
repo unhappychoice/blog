@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/unhappychoice/middleman-ogp.git
-  revision: 6ab3b4333d3f3c5b26ad013969f259b2b85d95fd
-  specs:
-    middleman-ogp (1.2.0)
-      middleman-core (>= 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -105,6 +98,8 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
+    middleman-ogp (1.4.0)
+      middleman-core (>= 4.0)
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
@@ -166,7 +161,7 @@ DEPENDENCIES
   middleman-blog
   middleman-livereload
   middleman-minify-html
-  middleman-ogp!
+  middleman-ogp
   middleman-syntax
   nokogiri
   redcarpet (~> 3.5)
