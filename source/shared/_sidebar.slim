@@ -10,11 +10,11 @@ aside#sidebar
         a href="#{tag_path(tag)}"
           span.badge= "#{articles.count}"
           = "#{tag}"
-  h3 月別
+  h3 年別
   ol
     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-      - articles.group_by {|a| a.date.month }.each do |month, articles|
+      - articles.group_by { |a| a.date.year }.each do |year, articles|
         li
-          a href="#{blog_month_path(year, month)}"
+          a href="#{blog_year_path(year)}"
             span.badge= "#{articles.count}"
-            = "#{year}年 #{month}月"
+            = "#{year}年"
