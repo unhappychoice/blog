@@ -1,4 +1,5 @@
 body {
+  font-size: 14px;
   background: $color-dark;
   -webkit-overflow-scrolling: touch;
 
@@ -108,9 +109,17 @@ body {
   font-size: 12px;
   color: $color-font;
   background: transparent;
+  list-style: none;
 
   li {
+    display: inline-block;
     margin: 0;
+  }
+
+  li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
   }
 }
 
@@ -160,14 +169,21 @@ body {
     list-style: none;
 
     .badge {
+      display: inline-block;
       min-width: 32px;
       margin-right: $space;
       margin-bottom: 1px;
       padding: 0 7px;
-      line-height: 15px;
+      opacity: 0.8;
+      color: #fff;
+      background-color: #777;
       font-size: 11px;
       font-weight: 400;
-      opacity: 0.8;
+      line-height: 15px;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      border-radius: 10px;
     }
 
     a {
