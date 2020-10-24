@@ -1,6 +1,6 @@
 ---
 title: My Github activity in 2019 / 06
-tags: github
+tags: github,programming
 ---
 
 再びOSS活動しだしたので、久々に

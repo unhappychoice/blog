@@ -14,9 +14,10 @@
         span.fa.fa-clock-o
         = current_page.date.strftime('%F')
       .tags
-        span.fa.fa-tag
         - current_page.tags.each do |tag|
-          = link_to("#{tag} ", tag_path(tag))
+          .tag
+            span.fa.fa-tag
+            = link_to("#{tag} ", tag_path(tag))
     .article__content
       == yield
 

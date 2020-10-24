@@ -5,9 +5,10 @@
       span.fa.fa-clock-o
       = article.date.strftime('%F')
     .tags
-      span.fa.fa-tag
       - article.tags.each do |tag|
-        = link_to("#{tag} ", tag_path(tag))
+        .tag
+          span.fa.fa-tag
+          = link_to("#{tag} ", tag_path(tag))
   .article__content
     = article.summary
     = link_to 'もっと読む', article

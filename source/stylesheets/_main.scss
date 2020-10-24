@@ -63,13 +63,69 @@ body {
     img.square {
       border-radius: 0;
     }
+
+    code {
+      font-size: 87.5%;
+      color: $color-middle;
+      word-break: break-word;
+    }
+
+    sup {
+      &:before {
+        content: '['
+      }
+
+      &:after {
+        content: ']'
+      }
+    }
+
+    .footnotes {
+      margin: 48px -24px -32px;
+      padding: 8px 0 24px;
+      color: $color-light;
+      background: $color-dark;
+
+      hr {
+        display: none;
+      }
+
+      ol, ul {
+        margin: 0;
+        padding-left: 16px;
+        li {
+          margin: 0;
+        }
+
+        p {
+          margin: 4px 0 0;
+          font-size: 12px;
+        }
+
+        a {
+          color: $color-font-inv-light;
+
+          &:hover {
+            color: $color-font-inv;
+          }
+        }
+      }
+    }
   }
 
   .paginator {
     display: flex;
     justify-content: space-between;
-    padding: $middle-space $middle-space;
-    border-top: solid 8px $color-dark;
+    padding: $middle-space 0;
+    background: $color-dark;
+
+    a {
+      color: $color-font-inv-light;
+
+      &:hover {
+        color: $color-font-inv;
+      }
+    }
   }
 }
 
@@ -156,7 +212,7 @@ body {
     margin: 0;
     padding: $middle-space;
     font-size: 16px;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $color-font-inv-light;
   }
 
   ol {

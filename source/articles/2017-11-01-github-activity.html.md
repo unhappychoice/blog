@@ -1,6 +1,6 @@
 ---
 title: My Github activity in 2017 / 10
-tags: github
+tags: github,programming
 ---
 
 HanamiとCycle.js 関連でちょこちょこと
