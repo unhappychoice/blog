@@ -51,6 +51,12 @@ h5 {
 p, ul, ol {
   margin: $middle-space 0 $middle-space;
   line-height: 1.8;
+
+  li {
+    ul, ol {
+      margin: $small-space 0 0;
+    }
+  }
 }
 
 ul, ol {
