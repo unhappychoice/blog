@@ -1,0 +1,24 @@
+javascript:
+  window.MathJax = {
+    loader: { load: ['[tex]/amscd'] },
+    tex: {
+      packages: { '[+]': ['amscd'] },
+      macros: {
+        cats: ["{\\mathcal{#1}}", 1],
+        catl: ["{\\mathbf{#1}}", 1],
+        set: ["{\\mathbb{#1}}", 1],
+        id: ["{\\mathbf{id}_{#1}}", 1],
+        functor: ["{\\mathbf{#1}}", 1],
+        bold: ["{\\bf #1}", 1]
+      }
+    },
+    "HTML-CSS": {
+      availableFonts: [],
+      preferredFont: null,
+      webFont: "Neo-Euler",
+      undefinedFamily: "'Noto Sans Japanese', sans-seif",
+      mtextFontInherit: true
+    }
+  };
+
+script id="MathJax-script" src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"

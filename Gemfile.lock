@@ -47,6 +47,9 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    inline_svg (1.7.1)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     jwt (2.2.2)
     kramdown (2.3.0)
       rexml
@@ -158,6 +161,7 @@ DEPENDENCIES
   activesupport
   builder (~> 3.2)
   github_api
+  inline_svg
   mgd
   middleman (~> 4.3.11)
   middleman-blog

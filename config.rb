@@ -1,9 +1,13 @@
 require 'active_support/all'
+require 'fileutils'
+require_relative './lib/latex_template'
+
+Tilt.register LatexTemplate, 'math'
 
 Time.zone = 'Tokyo'
 
 set :markdown_engine, :redcarpet
-set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, footnotes: true
+set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, footnotes: true, no_intra_emphasis: true
 set :relative_links, true
 
 page '/*.xml', layout: false
@@ -30,6 +34,7 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end
+
 activate :ogp do |ogp|
   ogp.namespaces = {
     fb: data.ogp.fb,
@@ -39,6 +44,15 @@ activate :ogp do |ogp|
 end
 
 helpers do
+  def ogp_tag
+    ogp_tags do |property, content|
+      if property.include?('twitter')
+        concat_content(tag(:meta, name: property, property: content))
+      else
+        concat_content(tag(:meta, property: property, content: content))
+      end
+    end
+  end
 end
 
 configure :build do

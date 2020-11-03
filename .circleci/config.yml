@@ -9,13 +9,17 @@ restore_bundle_cache: &restore_bundle_cache
   restore_cache:
     key: cache-blog-{{ checksum "Gemfile.lock" }}
 
+install_dependency: &install_dependency
+  run:
+    command: sudo apt-get install texlive-luatex pdf2svg
+
 jobs:
   build:
-    working_directory: ~/blog
     docker:
-      - image: circleci/ruby:2.6.3-node
+      - image: circleci/ruby:2.6.6-node
     steps:
       - checkout
+      - *install_dependency
       - *restore_bundle_cache
       - *bundle_install
       - run:
@@ -26,11 +30,11 @@ jobs:
           paths:
             - vendor/bundle
   deployment:
-    working_directory: ~/blog
     docker:
-      - image: circleci/ruby:2.6.3-node
+      - image: circleci/ruby:2.6.6-node
     steps:
       - checkout
+      - *install_dependency
       - *restore_bundle_cache
       - *bundle_install
       - run:
@@ -43,11 +47,11 @@ jobs:
           name: deploy
           command: scripts/deploy.sh
   generate:
-    working_directory: ~/blog
     docker:
-      - image: circleci/ruby:2.6.3-node
+      - image: circleci/ruby:2.6.6-node
     steps:
       - checkout
+      - *install_dependency
       - *restore_bundle_cache
       - *bundle_install
       - run:
@@ -57,18 +61,18 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore: master
       - deployment:
           filters:
             branches:
               only: master
-          requires: [build]
 
   github-article:
     jobs:
-      - build
-      - generate:
-          requires: [build]
+      - generate
     triggers:
       - schedule:
           cron: "0 0 1 * *"

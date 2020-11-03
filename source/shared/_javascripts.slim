@@ -1,12 +1,4 @@
-= partial 'shared/ga'
 script src="https://polyfill.io/v3/polyfill.min.js?features=es6"
-script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async=true
-script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-javascript:
-  WebFont.load({
-    google: {
-      families: ['Noto Sans JP']
-    }
-  });
-
+= partial 'shared/ga'
+= partial 'shared/mathjax'
 = javascript_include_tag 'all'

@@ -1,12 +1,13 @@
 doctype html
 html
   head
-    title unhappychoice#{' - ' + current_article.title unless current_article.nil?}
+    title
+      = "#{current_article&.title&.then { |title| "#{title} - blog.unhappychoice.com" } || 'blog.unhappychoice.com' }"
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
     meta charset="utf-8"
     meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible"
     meta content="width=device-width, initial-scale=1" name="viewport"
-    = ogp_tags { |property, content| property.include?('twitter') ? concat_content(tag(:meta, name: property, property: content)) : concat_content(tag(:meta, property: property, content: content)) }
+    = ogp_tag
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
 
     = partial 'shared/stylesheets'
