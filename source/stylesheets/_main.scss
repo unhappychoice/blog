@@ -52,9 +52,14 @@ body {
     &__content {
       margin-top: 0;
       padding: 0 $middle-space $middle-space;
+
+      div {
+        position: relative;
+      }
     }
 
     img {
+      display: block;
       max-width: 100%;
       margin: $middle-space auto;
       border-radius: 15px;
@@ -68,6 +73,12 @@ body {
       font-size: 87.5%;
       color: $color-middle;
       word-break: break-word;
+    }
+
+    li {
+      ol, ul {
+        margin: 0;
+      }
     }
 
     sup {
