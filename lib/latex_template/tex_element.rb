@@ -17,6 +17,7 @@ class TexElement
         \\usetikzlibrary{arrows}
         #{tex_macros.join("\n")}
         \\begin{document}
+        \\fontsize{14pt}{20pt}\\selectfont
         #{@content}
         \\end{document}
     TEMPLATE

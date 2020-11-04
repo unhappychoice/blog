@@ -11,7 +11,7 @@ restore_bundle_cache: &restore_bundle_cache
 
 install_dependency: &install_dependency
   run:
-    command: sudo apt-get install texlive-luatex pdf2svg
+    command: sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-luatex pdf2svg
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
       - *bundle_install
       - run:
           name: build
-          command: bundle exec middleman build
+          command: bundle exec middleman build --no-parallel
       - save_cache:
           key: cache-blog-{{ checksum "Gemfile.lock" }}
           paths:
@@ -39,7 +39,7 @@ jobs:
       - *bundle_install
       - run:
           name: build
-          command: bundle exec middleman build
+          command: bundle exec middleman build --no-parallel
       - run:
           name: setup git
           command: git config --global user.name 'Circle CI' && git config --global user.email 'unhappychoice@gmail.com'

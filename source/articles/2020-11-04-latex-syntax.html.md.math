@@ -1,0 +1,304 @@
+---
+title: 記事内でTex入力できるようにした
+tags: programming,others
+---
+
+記事を書くための yak-shaving。結構四苦八苦したので記事にする。
+
+実際の実装は→
+[Latex syntax by unhappychoice · Pull Request #143 · unhappychoice/blog](https://github.com/unhappychoice/blog/pull/143)
+
+READMORE
+
+## 要件
+圏論にまつわる記事を書くために、
+
+- 一般の数式を書く
+- 可換図式を書く
+- 圏の概略図等、ある程度自由な図を書く
+- 作ったソースは残したい
+   - コピペや編集のしやすさ
+   
+ということがやりたかった。
+
+## 最終的な構成
+
+### 1. [rtomayko/tilt](https://github.com/rtomayko/tilt) でテンプレート形式 `.math` を追加
+Middleman では、テンプレートの処理に対して tilt が使われていたので、
+`xxx.html.md.math` のような記事に対して処理をするようテンプレートマッピングを追加した。
+Markdown エンジンに対して独自記法を追加するような方針のほうが若干良さそうな気はしたが、[vmg/redcarpet](https://github.com/vmg/redcarpet) 眺めるに若干難しそうだったので断念。
+
+記事中の `tex` タグを雑に正規表現で取ってきて[^1]、後続処理へ。
+
+### 2. 埋め込まれた `tex` タグを `img` タグへ変換
+- `luatex` で TEX -> PDF 変換
+- `pdf2svg` で PDF -> SVG 変換
+- SVG を `Base64` でエンコードしつつ、インラインの `<img>` として埋め込み
+
+という感じに。何らかの形でライブラリにまでするのが理想だが、外部コマンドへの依存だったり汎用性を若干担保できないので見送り。
+
+## 結果
+[https://en.wikibooks.org/wiki/LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics) より適当に
+
+<tex>
+$$\cos (2\theta) = \cos^2 \theta - \sin^2 \theta$$
+</tex>
+
+<tex>
+$$
+  x = a_0 + \cfrac{1}{a_1 
+          + \cfrac{1}{a_2 
+          + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
+$$
+</tex>
+
+<tex>
+$$
+A_{m,n} = 
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+ \end{pmatrix}
+$$ 
+</tex>
+
+[https://texample.net/tikz/examples/parallelepiped/](https://texample.net/tikz/examples/parallelepiped/) より
+
+<tex>
+\begin{tikzpicture}[font=\LARGE] 
+
+% Figure parameters (tta and k needs to have the same sign)
+% They can be modified at will
+\def \tta{ -10.00000000000000 } % Defines the first angle of perspective
+\def \k{    -3.00000000000000 } % Factor for second angle of perspective
+\def \l{     6.00000000000000 } % Defines the width  of the parallelepiped
+\def \d{     5.00000000000000 } % Defines the depth  of the parallelepiped
+\def \h{     7.00000000000000 } % Defines the heigth of the parallelepiped
+
+% The vertices A,B,C,D define the reference plan (vertical)
+\coordinate (A) at (0,0); 
+\coordinate (B) at ({-\h*sin(\tta)},{\h*cos(\tta)}); 
+\coordinate (C) at ({-\h*sin(\tta)-\d*sin(\k*\tta)},
+                    {\h*cos(\tta)+\d*cos(\k*\tta)}); 
+\coordinate (D) at ({-\d*sin(\k*\tta)},{\d*cos(\k*\tta)}); 
+
+% The vertices Ap,Bp,Cp,Dp define a plane translated from the 
+% reference plane by the width of the parallelepiped
+\coordinate (Ap) at (\l,0); 
+\coordinate (Bp) at ({\l-\h*sin(\tta)},{\h*cos(\tta)}); 
+\coordinate (Cp) at ({\l-\h*sin(\tta)-\d*sin(\k*\tta)},
+                     {\h*cos(\tta)+\d*cos(\k*\tta)}); 
+\coordinate (Dp) at ({\l-\d*sin(\k*\tta)},{\d*cos(\k*\tta)}); 
+
+% Marking the vertices of the tetrahedron (red)
+% and of the parallelepiped (black)
+\fill[black]  (A) circle [radius=2pt]; 
+\fill[red]    (B) circle [radius=2pt]; 
+\fill[black]  (C) circle [radius=2pt]; 
+\fill[red]    (D) circle [radius=2pt]; 
+\fill[red]   (Ap) circle [radius=2pt]; 
+\fill[black] (Bp) circle [radius=2pt]; 
+\fill[red]   (Cp) circle [radius=2pt]; 
+\fill[black] (Dp) circle [radius=2pt]; 
+
+% painting first the three visible faces of the tetrahedron
+\filldraw[draw=red,bottom color=red!50!black, top color=cyan!50]
+  (B) -- (Cp) -- (D);
+\filldraw[draw=red,bottom color=red!50!black, top color=cyan!50]
+  (B) -- (D)  -- (Ap);
+\filldraw[draw=red,bottom color=red!50!black, top color=cyan!50]
+  (B) -- (Cp) -- (Ap);
+
+% Draw the edges of the tetrahedron
+\draw[red,-,very thick] (Ap) --  (D)
+                        (Ap) --  (B)
+                        (Ap) -- (Cp)
+                        (B)  --  (D)
+                        (Cp) --  (D)
+                        (B)  -- (Cp);
+
+% Draw the visible edges of the parallelepiped
+\draw [-,thin] (B)  --  (A)
+               (Ap) -- (Bp)
+               (B)  --  (C)
+               (D)  --  (C)
+               (A)  --  (D)
+               (Ap) --  (A)
+               (Cp) --  (C)
+               (Bp) --  (B)
+               (Bp) -- (Cp);
+
+% Draw the hidden edges of the parallelepiped
+\draw [gray,-,thin] (Dp) -- (Cp);
+                    (Dp) --  (D);
+                    (Ap) -- (Dp);
+
+% Name the vertices (the names are not consistent
+%  with the node name, but it makes the programming easier)
+\draw (Ap) node [right]           {$A$}
+      (Bp) node [right, gray]     {$F$}
+      (Cp) node [right]           {$D$}
+      (C)  node [left,gray]       {$E$}
+      (D)  node [left]            {$B$}
+      (A)  node [left,gray]       {$G$}
+      (B)  node [above left=+5pt] {$C$}
+      (Dp) node [right,gray]      {$H$};
+
+% Drawing again vertex $C$, node (B) because it disappeared behind the edges.
+% Drawing again vertex $H$, node (Dp) because it disappeared behind the edges.
+\fill[red]   (B) circle [radius=2pt]; 
+\fill[gray] (Dp) circle [radius=2pt]; 
+
+% From the reference and this example one can easily draw 
+% the twin tetrahedron jointly to this one.
+% Drawing the edges of the twin tetrahedron
+% switching the p_s: A <-> Ap, etc...
+\draw[red,-,dashed, thin] (A)  -- (Dp)
+                          (A)  -- (Bp)
+                          (A)  --  (C)
+                          (Bp) -- (Dp)
+                          (C)  -- (Dp)
+                          (Bp) --  (C);
+\end{tikzpicture}
+</tex>
+
+[https://texample.net/tikz/examples/three-link-annotated/](https://texample.net/tikz/examples/three-link-annotated/) より
+
+<tex>
+% Note. This illustration was originally made with PSTricks. Conversion to
+% PGF/TikZ was straightforward. However, I could probably have made it more
+% elegant.
+
+% Define a variable as a length
+% Input:
+%   #1 Variable name
+%   #2 Value
+%
+% Example:
+%   \nvar{\varx}{2cm}
+\usetikzlibrary{patterns}
+\newcommand{\nvar}[2]{%
+    \newlength{#1}
+    \setlength{#1}{#2}
+}
+
+% Define a few constants for drawing
+\nvar{\dg}{0.3cm}
+\def\dw{0.25}\def\dh{0.5}
+\nvar{\ddx}{1.5cm}
+
+% Define commands for links, joints and such
+\def\link{\draw [double distance=1.5mm, very thick] (0,0)--}
+\def\joint{%
+    \filldraw [fill=white] (0,0) circle (5pt);
+    \fill[black] circle (2pt);
+}
+\def\grip{%
+    \draw[ultra thick](0cm,\dg)--(0cm,-\dg);
+    \fill (0cm, 0.5\dg)+(0cm,1.5pt) -- +(0.6\dg,0cm) -- +(0pt,-1.5pt);
+    \fill (0cm, -0.5\dg)+(0cm,1.5pt) -- +(0.6\dg,0cm) -- +(0pt,-1.5pt);
+}
+\def\robotbase{%
+    \draw[rounded corners=8pt] (-\dw,-\dh)-- (-\dw, 0) --
+        (0,\dh)--(\dw,0)--(\dw,-\dh);
+    \draw (-0.5,-\dh)-- (0.5,-\dh);
+    \fill[pattern=north east lines] (-0.5,-1) rectangle (0.5,-\dh);
+}
+
+% Draw an angle annotation
+% Input:
+%   #1 Angle
+%   #2 Label
+% Example:
+%   \angann{30}{$\theta_1$}
+\newcommand{\angann}[2]{%
+    \begin{scope}[red]
+    \draw [dashed, red] (0,0) -- (1.2\ddx,0pt);
+    \draw [->, shorten >=3.5pt] (\ddx,0pt) arc (0:#1:\ddx);
+    % Unfortunately automatic node placement on an arc is not supported yet.
+    % We therefore have to compute an appropriate coordinate ourselves.
+    \node at (#1/2-2:\ddx+8pt) {#2};
+    \end{scope}
+}
+
+% Draw line annotation
+% Input:
+%   #1 Line offset (optional)
+%   #2 Line angle
+%   #3 Line length
+%   #5 Line label
+% Example:
+%   \lineann[1]{30}{2}{$L_1$}
+\newcommand{\lineann}[4][0.5]{%
+    \begin{scope}[rotate=#2, blue,inner sep=2pt]
+        \draw[dashed, blue!40] (0,0) -- +(0,#1)
+            node [coordinate, near end] (a) {};
+        \draw[dashed, blue!40] (#3,0) -- +(0,#1)
+            node [coordinate, near end] (b) {};
+        \draw[|<->|] (a) -- node[fill=white] {#4} (b);
+    \end{scope}
+}
+
+% Define the kinematic parameters of the three link manipulator.
+\def\thetaone{30}
+\def\Lone{2}
+\def\thetatwo{30}
+\def\Ltwo{2}
+\def\thetathree{30}
+\def\Lthree{1}
+
+\begin{tikzpicture}
+    \robotbase
+    \angann{\thetaone}{$\theta_1$}
+    \lineann[0.7]{\thetaone}{\Lone}{$L_1$}
+    \link(\thetaone:\Lone);
+    \joint
+    \begin{scope}[shift=(\thetaone:\Lone), rotate=\thetaone]
+        \angann{\thetatwo}{$\theta_2$}
+        \lineann[-1.5]{\thetatwo}{\Ltwo}{$L_2$}
+        \link(\thetatwo:\Ltwo);
+        \joint
+        \begin{scope}[shift=(\thetatwo:\Ltwo), rotate=\thetatwo]
+            \angann{\thetathree}{$\theta_3$}
+            \lineann[0.7]{\thetathree}{\Lthree}{$L_3$}
+            \draw [dashed, red,rotate=\thetathree] (0,0) -- (1.2\ddx,0pt);
+            \link(\thetathree:\Lthree);
+            \joint
+            \begin{scope}[shift=(\thetathree:\Lthree), rotate=\thetathree]
+                \grip
+            \end{scope}
+        \end{scope}
+    \end{scope}
+\end{tikzpicture}
+</tex>
+
+楽しい！✌('ω'✌ )三✌('ω')✌三( ✌'ω')✌
+
+## 利用ようとした技術
+### [MathJax](https://www.mathjax.org)
+- 図が欠けない
+- 可換図式は一応かける
+  - `AMScd` が利用できる[^2]
+
+一応まだ利用しているが、画像に置き換えたほうが当然パフォーマンスが良いので、できれば自前の変換の方に移行していきたい。
+
+### [TikZJax](https://tikzjax.com)
+- `tikz` の範囲で自由に図がかける
+- 処理が全てクライアントサイドなので、パフォーマンス的に厳しい
+    - tex のバイナリを `wasm` にして、パッケージ読み込んだメモリダンプを読み込んで、DVI出力からさらに SVG 変換までのフルコース
+- tikzcd 等、追加パッケージが利用しづらい
+    - メモリダンプを作り直したりしないといけない
+- 導入が難しい
+    - [lack of HTTPS depolyment · Issue #3 · kisonecat/tikzjax](https://github.com/kisonecat/tikzjax/issues/3)にあるように、 `https` で配信するためには各種ファイルを自前で配信する必要あり。
+    - それでも動かないのでソースをデバッグして `gz` の解凍に失敗していたりを直した
+
+### 他の Tex 関連ツールや Web サービス等
+数式入力で画像を吐いてくれるようなツールはすでに様々あるが、生成ソースの管理がどうしても手作業になる感じがあり、見送り。
+
+### 他の図をかけるやつとか ( UML etc...
+数学表現をするのに、結局 Tex が最強としかならなかった。
+
+[^1]: [https://github.com/unhappychoice/blog/blob/a012dd4099006fbebb5c5db6b0e9e61c8bd2671c/lib/latex_template.rb#L6](https://github.com/unhappychoice/blog/blob/a012dd4099006fbebb5c5db6b0e9e61c8bd2671c/lib/latex_template.rb#L6)
+[^2]: [amscd — MathJax 3.1 documentation](http://docs.mathjax.org/en/latest/input/tex/extensions/amscd.html)
