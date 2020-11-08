@@ -1,0 +1,94 @@
+---
+title: 圏論 | 圏の例
+tags: programming,category_theory
+---
+
+## 圏の例
+### 空圏 \\(\cats{0}\\)
+単に対象を1つも持たない圏を考えられる。もちろん対象がなければ、恒等射も対象間の射も存在しない。
+
+<tex>
+  \begin{tikzpicture}
+    \draw (0,0) circle (3);
+    \node (Category) at (-2, 3.2) {\large $\mathcal{C}$};
+  \end{tikzpicture}
+</tex>
+
+### 離散圏
+異なる対象の間の射がない圏で、恒等射のみ持つもの。コミュ障をあつめると離散圏をなすらしい。集合に同じ。
+
+<tex>
+  \begin{tikzpicture}
+    \draw (0,0) circle (3);
+    \node (Category) at (-2, 3) {\large $\mathcal{C}$};
+    \node [circle, scale=0.6, fill=black, label=a] (A) at (-2, 0) {};
+    \node [circle, scale=0.6, fill=black, label=below:b] (B) at (0, -2) {};    
+    \node [circle, scale=0.6, fill=black, label=c] (C) at (1, 1) {};
+    
+    \draw [->, thick] (A) to[out=225, in=135, looseness=15] (A) node[below=8] {$\mathbf{id}_{a}$};
+    \draw [->, thick] (B) to[out=315, in=45, looseness=15] (B) node[right=12] {$\mathbf{id}_{b}$};
+    \draw [->, thick] (C) to[out=315, in=45, looseness=15] (C) node[right=12] {$\mathbf{id}_{c}$};
+  \end{tikzpicture}
+</tex>
+
+### 集合の圏 \\(\catl{Set}\\)
+- 対象: 全ての集合 
+  - 例: 実数の集合 \\(\set{R}\\) や、冪集合 \\(\set{R}\times\set{R}\\) 複素数の集合 \\(\set{C}\\) ...etc
+- 射: 全ての写像
+  - 例: \\(f::\mathbb{R}\rightarrow\mathbb{C}\\) の \\(f(x) = x + i\\)
+    
+となるような圏。もちろん実数から複素数に写す写像は↑に限らず無数にあるので、それら全ての集合が \\(Hom(\mathbb{R}, \mathbb{C})\\) となる。
+
+<tex>
+  \begin{tikzpicture}
+    \draw (0,0) circle (3);
+    \node (Category) at (-2, 3) {\large $\mathcal{C}$};
+    \node [circle, scale=0.6, fill=black, label={$R$}] (A) at (-2, 0) {};
+    \node [circle, scale=0.6, fill=black, label=below:{$R^2$}] (B) at (0, -2) {};    
+    \node [circle, scale=0.6, fill=black, label={$C$}] (C) at (1, 1) {};
+
+    \draw [->, thick] (A) to[bend left=20] node[midway, above] {} (B);
+    \draw [->, thick] (B) to[bend left=20] node[midway, above] {} (C);
+    \draw [->, thick] (A) to[bend left=20] node[midway, above] {} (C);
+    \draw [->, thick] (B) to[bend left=20] node[midway, above] {} (A);
+    \draw [->, thick] (C) to[bend left=20] node[midway, above] {} (B);
+    \draw [->, thick] (C) to[bend left=20] node[midway, above] {} (A);
+    \draw [->, thick] (A) to[out=225, in=135, looseness=15] (A) node[below=8] {$\mathbf{id}_{R}$};
+    \draw [->, thick] (B) to[out=315, in=45, looseness=15] (B) node[right=12] {$\mathbf{id}_{R^2}$};
+    \draw [->, thick] (C) to[out=315, in=45, looseness=15] (C) node[right=12] {$\mathbf{id}_{C}$};
+  \end{tikzpicture}
+</tex>
+
+### プログラミングの圏
+Haskell では Hask圏と呼ばれているものだが、ここではプログラミングの圏と呼ぶ。 
+注意しないといけないのは Hask は圏をなしていない。Haskも圏をなしていないので、他のプログラミング言語（純粋ではない関数をかける）ではもちろん圏をなしていない。
+- Hask は圏になっていない
+    - `undefined` の bottom type の存在
+    - https://stackoverflow.com/questions/48485660/is-hask-even-a-category
+    - Scala や Swift 全体はなおさら
+
+
+- 対象: 型
+  - 例: `Int`, `String`, `List<Int>`, ...
+- 射: 関数
+  - 例: `func toString(number: Integer) -> String`, ...
+
+<tex>
+  \begin{tikzpicture}
+    \draw (0,0) circle (3);
+    \node (Category) at (-2, 3.2) {\large $\mathcal{C}$};
+    \node[circle, scale=0.6, fill=black, label=Int] (A) at (-2, 0) {};
+    \node[circle, scale=0.6, fill=black, label=below:String] (B) at (0, -2) {};    
+    \node[circle, scale=0.6, fill=black, label=List<Int>] (C) at (1, 1) {};
+    
+    \draw [->, thick] (A) to[bend left=20] node[midway, above] {} (B);
+    \draw [->, thick] (B) to[bend left=20] node[midway, above] {} (C);
+    \draw [->, thick] (A) to[bend left=20] node[midway, above] {} (C);
+    \draw [->, thick] (B) to[bend left=20] node[midway, above] {} (A);
+    \draw [->, thick] (C) to[bend left=20] node[midway, above] {} (B);
+    \draw [->, thick] (C) to[bend left=20] node[midway, above] {} (A);
+    \draw [->, thick] (A) to[out=225, in=135, looseness=15] (A) node[below=8] {$\mathbf{id}_{Int}$};
+    \draw [->, thick] (B) to[out=315, in=45, looseness=15] (B) node[right=12] {$\mathbf{id}_{String}$};
+    \draw [->, thick] (C) to[out=315, in=45, looseness=15] (C) node[right=12] {$\mathbf{id}_{List<Int>}$};
+  \end{tikzpicture}
+</tex>
