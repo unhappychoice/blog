@@ -18,7 +18,7 @@ body {
     height: 100%;
     min-height: 100%;
     padding: 0 $large-space $large-space;
-    overflow: scroll;
+    overflow: auto;
 
     .content {
       max-width: 720px;
@@ -216,7 +216,7 @@ body {
     min-height: 100%;
     width: 300px;
     padding: 15px 0;
-    overflow: scroll;
+    overflow: auto;
   }
 
   h3 {
