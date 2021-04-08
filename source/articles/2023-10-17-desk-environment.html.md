@@ -1,6 +1,13 @@
 ---
 title: デスク環境の変遷
-tags: programming 
+tags: programming,other
+ogp:
+  og:
+    image:
+      '': https://blog.unhappychoice.com/images/2023-10-17-desk-environment/2023-2.jpg
+      type: image/jpeg
+      width: 1024
+      height: 768
 ---
 
 自分のための回顧録
