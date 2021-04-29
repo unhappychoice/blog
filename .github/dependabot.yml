@@ -1,0 +1,21 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+    timezone: Asia/Tokyo
+  open-pull-requests-limit: 20
+  reviewers:
+  - unhappychoice
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  ignore:
+  - dependency-name: oauth2
+    versions:
+    - 1.4.6
+  - dependency-name: activesupport
+    versions:
+    - 5.2.4.5
