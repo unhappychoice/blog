@@ -153,7 +153,7 @@ GEM
     redcarpet (3.5.1)
     rexml (3.2.5)
     rouge (3.26.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
     servolux (0.13.0)
