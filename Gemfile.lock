@@ -18,7 +18,7 @@ GEM
     contracts (0.13.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    dotenv (2.7.6)
+    dotenv (2.8.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
