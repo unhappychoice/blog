@@ -57,8 +57,9 @@ GEM
       faraday (>= 0.8, < 2)
       hashie (~> 3.5, >= 3.5.2)
       oauth2 (~> 1.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.0.2)
+      temple (>= 0.8.2)
+      thor
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
