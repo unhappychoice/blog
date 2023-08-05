@@ -11,12 +11,12 @@ restore_bundle_cache: &restore_bundle_cache
 
 install_dependency: &install_dependency
   run:
-    command: sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-luatex pdf2svg
+    command: sudo apt update && sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-luatex pdf2svg
 
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.6.6-node
+      - image: cimg/ruby:3.2-node
     steps:
       - checkout
       - *install_dependency
@@ -31,7 +31,7 @@ jobs:
             - vendor/bundle
   deployment:
     docker:
-      - image: circleci/ruby:2.6.6-node
+      - image: cimg/ruby:3.2-node
     steps:
       - checkout
       - *install_dependency
@@ -48,7 +48,7 @@ jobs:
           command: scripts/deploy.sh
   generate:
     docker:
-      - image: circleci/ruby:2.6.6-node
+      - image: cimg/ruby:3.2-node
     steps:
       - checkout
       - *install_dependency
