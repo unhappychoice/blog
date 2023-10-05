@@ -169,7 +169,7 @@ GEM
     slim (5.1.0)
       temple (~> 0.10.0)
       tilt (>= 2.0.6, < 2.2)
-    temple (0.10.2)
+    temple (0.10.3)
     thor (1.2.2)
     thread_safe (0.3.6)
     tilt (2.0.11)
