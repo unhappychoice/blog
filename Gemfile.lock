@@ -57,9 +57,8 @@ GEM
       faraday (>= 0.8, < 2)
       hashie (~> 3.5, >= 3.5.2)
       oauth2 (~> 1.0)
-    haml (6.2.3)
-      temple (>= 0.8.2)
-      thor
+    haml (5.2.2)
+      temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
@@ -166,10 +165,10 @@ GEM
     sassc (2.4.0)
       ffi (~> 1.9)
     servolux (0.13.0)
-    slim (5.1.0)
-      temple (~> 0.10.0)
-      tilt (>= 2.0.6, < 2.2)
-    temple (0.10.3)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
+    temple (0.8.2)
     thor (1.2.2)
     thread_safe (0.3.6)
     tilt (2.0.11)
@@ -189,7 +188,7 @@ DEPENDENCIES
   activesupport
   builder (~> 3.2)
   github_api
-  haml (~> 6.2)
+  haml (~> 5.2)
   inline_svg
   mgd
   middleman (~> 4.4)
@@ -200,7 +199,7 @@ DEPENDENCIES
   middleman-syntax
   nokogiri
   redcarpet (~> 3.6)
-  slim (~> 5.1)
+  slim (~> 4.1)
   webrick (~> 1.8)
 
 BUNDLED WITH
