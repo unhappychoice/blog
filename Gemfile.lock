@@ -57,8 +57,9 @@ GEM
       faraday (>= 0.8, < 2)
       hashie (~> 3.5, >= 3.5.2)
       oauth2 (~> 1.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.2.3)
+      temple (>= 0.8.2)
+      thor
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
@@ -188,7 +189,7 @@ DEPENDENCIES
   activesupport
   builder (~> 3.2)
   github_api
-  haml (~> 5.2)
+  haml (~> 6.2)
   inline_svg
   mgd
   middleman (~> 4.5)
