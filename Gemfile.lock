@@ -152,7 +152,7 @@ GEM
     padrino-support (0.15.3)
     parallel (1.24.0)
     parslet (2.0.0)
-    public_suffix (5.0.4)
+    public_suffix (5.0.5)
     racc (1.7.3)
     rack (2.2.9)
     rack-livereload (0.3.17)
