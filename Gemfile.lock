@@ -11,7 +11,7 @@ GEM
     backports (3.25.0)
     base64 (0.2.0)
     bigdecimal (3.1.8)
-    builder (3.2.4)
+    builder (3.3.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -192,7 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
-  builder (~> 3.2)
+  builder (~> 3.3)
   github_api
   haml (~> 5.2)
   inline_svg
