@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'activesupport'
-gem 'builder', '~> 3.2'
+gem 'builder', '~> 3.3'
 gem 'github_api'
 gem 'haml', '~> 5.2'
 gem 'inline_svg'
