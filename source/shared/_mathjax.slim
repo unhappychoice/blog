@@ -6,8 +6,11 @@ javascript:
       macros: {
         cats: ["{\\mathcal{#1}}", 1],
         catl: ["{\\mathbf{#1}}", 1],
+        object: ["{\\mathrm{Ob}(\\cats{#1})}", 1],
+        morphism: ["{\\mathrm{Mor}(\\cats{#1})}", 1],
+        hom: ["{\\mathrm{Hom}(#1, #2)}", 2],
         set: ["{\\mathbb{#1}}", 1],
-        id: ["{\\mathbf{id}_{#1}}", 1],
+        id: ["{\\mathrm{id}_{#1}}", 1],
         functor: ["{\\mathbf{#1}}", 1],
         bold: ["{\\bf #1}", 1]
       }
