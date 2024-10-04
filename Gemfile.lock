@@ -72,7 +72,7 @@ GEM
     inline_svg (1.10.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
-    jwt (2.9.1)
+    jwt (2.9.3)
       base64
     kramdown (2.4.0)
       rexml
