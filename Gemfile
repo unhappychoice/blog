@@ -15,4 +15,4 @@ gem 'middleman-ogp'
 gem 'nokogiri'
 gem 'redcarpet', '~> 3.6'
 gem 'slim', '~> 4.1'
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.9"
