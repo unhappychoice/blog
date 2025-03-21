@@ -14,5 +14,5 @@ gem 'middleman-minify-html'
 gem 'middleman-ogp'
 gem 'nokogiri'
 gem 'redcarpet', '~> 3.6'
-gem 'slim', '~> 4.1'
+gem 'slim', '~> 5.2'
 gem "webrick", "~> 1.9"
