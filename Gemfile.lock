@@ -89,7 +89,7 @@ GEM
       kramdown (>= 2.3.0)
       middleman-cli (= 4.5.1)
       middleman-core (= 4.5.1)
-    middleman-blog (4.0.3)
+    middleman-blog (4.1.0)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
