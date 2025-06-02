@@ -10,7 +10,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     backports (3.25.1)
     base64 (0.2.0)
-    bigdecimal (3.2.0)
+    bigdecimal (3.2.1)
     builder (3.3.0)
     coffee-script (2.4.1)
       coffee-script-source
