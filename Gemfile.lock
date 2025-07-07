@@ -67,7 +67,7 @@ GEM
     hashie (3.6.0)
     htmlcompressor (0.2.0)
     http_parser.rb (0.8.0)
-    i18n (1.6.0)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     inline_svg (1.10.0)
       activesupport (>= 3.0)
