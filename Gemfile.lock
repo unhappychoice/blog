@@ -1,14 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.8.7)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+    activesupport (8.0.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
       i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
       minitest (>= 5.1)
-      tzinfo (~> 2.0)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.3.0)
+    benchmark (0.4.1)
     bigdecimal (3.2.2)
     builder (3.3.0)
     coffee-script (2.4.1)
@@ -16,10 +25,12 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.3.5)
+    connection_pool (2.5.3)
     contracts (0.17.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     dotenv (3.1.8)
+    drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -79,6 +90,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     memoist (0.16.2)
     mgd (0.2.0)
       middleman (>= 3.0.0)
@@ -170,6 +182,7 @@ GEM
     ruby2_keywords (0.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
+    securerandom (0.4.1)
     servolux (0.13.0)
     slim (5.2.1)
       temple (~> 0.10.0)
@@ -185,6 +198,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.1)
       execjs (>= 0.3.0, < 3)
+    uri (1.0.3)
     webrick (1.9.1)
 
 PLATFORMS
