@@ -15,8 +15,6 @@ body {
   background: $color-dark;
 
   @media only screen and (min-width:768px) {
-    height: 100%;
-    min-height: 100%;
     padding: 0 $large-space $large-space;
     overflow: auto;
 
@@ -36,12 +34,12 @@ body {
 
   .content {
     padding: 0;
-    background: $color-light;
   }
 
   .article {
     margin: 0;
     padding: 0;
+    background: $color-light;
     border-top: solid 8px $color-dark;
 
     &__title {
@@ -62,7 +60,7 @@ body {
       display: block;
       max-width: 100%;
       margin: $middle-space auto;
-      border-radius: 15px;
+      border-radius: 4px;
     }
 
     img.square {
@@ -128,7 +126,6 @@ body {
     display: flex;
     justify-content: space-between;
     padding: $middle-space 0;
-    background: $color-dark;
 
     a {
       color: $color-font-inv-light;
@@ -146,6 +143,7 @@ body {
   border: none;
   box-shadow: none;
   text-align: center;
+  background: $color-light;
 
   &__image {
     display: block;
@@ -175,7 +173,7 @@ body {
   line-height: 36px;
   font-size: 12px;
   color: $color-font;
-  background: transparent;
+  background: $color-light;
   list-style: none;
 
   li {
@@ -212,8 +210,6 @@ body {
   background: $color-deep;
 
   @media only screen and (min-width:768px) {
-    height: 100%;
-    min-height: 100%;
     width: 300px;
     padding: 15px 0;
     overflow: auto;
@@ -254,10 +250,10 @@ body {
     }
 
     a {
-      color: $color-font-inv-light;
+      color: rgba($color-font-inv-light, .6);
 
       &:hover {
-        color: $color-font-inv;
+        color: rgba($color-font-inv, 1.2);
       }
     }
   }
