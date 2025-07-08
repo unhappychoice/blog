@@ -23,6 +23,6 @@
 
   .paginator
     - if current_article.article_previous
-      .paginator__prev= link_to("前の記事へ", current_article.article_previous.url)
+      .paginator__prev= link_to("古い記事へ", current_article.article_previous.url)
     - if current_article.article_next
-      .paginator__next= link_to("次の記事へ", current_article.article_next.url)
+      .paginator__next= link_to("新しい記事へ", current_article.article_next.url)

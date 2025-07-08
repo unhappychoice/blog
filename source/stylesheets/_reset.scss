@@ -1,7 +1,5 @@
 html, body {
-  font-family: 'Noto Sans JP', Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
-  height: 100%;
-  min-height: 100%;
+  font-family: 'Rubik', 'Noto Sans JP', Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif;
   width: 100%;
   max-width: 100%;
   overflow: auto;
@@ -16,7 +14,7 @@ html, body {
 h1 {
   margin: $large-space * 2 0 $middle-space;
   padding-bottom: $space;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 26px;
   border-bottom: 1px solid $color-border;
 }
@@ -24,7 +22,7 @@ h1 {
 h2 {
   margin: $large-space * 2 0 $middle-space;
   padding-bottom: 10px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 22px;
   border-bottom: 1px solid $color-border;
 }
@@ -33,19 +31,19 @@ h3 {
   margin: $large-space 0 $middle-space;
   padding-bottom: 10px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h4 {
   margin: $middle-space 0 $middle-space;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h5 {
   margin: $middle-space 0 $middle-space;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 p, ul, ol {
