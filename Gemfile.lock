@@ -132,10 +132,10 @@ GEM
       toml
       uglifier (>= 3, < 5)
       webrick
-    middleman-livereload (3.4.7)
+    middleman-livereload (3.5.0)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
-      rack-livereload (~> 0.3.15)
+      rack-livereload (~> 0.6.1)
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
@@ -169,8 +169,8 @@ GEM
     public_suffix (6.0.2)
     racc (1.8.1)
     rack (3.1.16)
-    rack-livereload (0.3.17)
-      rack
+    rack-livereload (0.6.1)
+      rack (>= 3.0, < 3.2)
     rackup (2.2.1)
       rack (>= 3)
     rb-fsevent (0.11.2)
