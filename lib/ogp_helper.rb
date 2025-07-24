@@ -47,6 +47,10 @@ module OgpHelper
   def ogp_image
     if current_page.data.image
       "https://blog.unhappychoice.com/images#{current_page.data.image}"
+    elsif current_page.path.start_with?("articles/") && current_page.data.title
+      # 自動生成されたOGP画像のパスを返す
+      # 例: /images/ogp/2025-07-25-test-article.png
+      "https://blog.unhappychoice.com/images/ogp/#{current_page.path.gsub(/\.html$/, '.png').gsub(/^articles\//, '')}"
     else
       nil
     end

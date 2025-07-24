@@ -11,7 +11,7 @@ restore_bundle_cache: &restore_bundle_cache
 
 install_dependency: &install_dependency
   run:
-    command: sudo apt update && sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-luatex pdf2svg
+    command: sudo apt update && sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-luatex pdf2svg imagemagick libmagickwand-dev fonts-noto-cjk
 
 jobs:
   build:
