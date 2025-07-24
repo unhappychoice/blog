@@ -2,6 +2,7 @@ require 'active_support/all'
 require 'fileutils'
 require_relative './lib/latex_template'
 require_relative './lib/ogp_helper'
+require_relative './lib/ogp_generator'
 
 helpers OgpHelper
 
@@ -43,6 +44,23 @@ configure :build do
   activate :minify_javascript
   activate :gzip
   activate :minify_html
+end
+
+# ビルド後にOGP画像を生成する
+after_build do |builder|
+  sitemap.resources.each do |resource|
+    # 記事ページのみを対象とする
+    if resource.path.start_with?('articles/') && resource.data.title
+      # OGP画像のファイル名を決定 (例: 記事のパスから拡張子を除いて .png を付加)
+      ogp_image_name = resource.path.gsub(/\.html$/, '.png').gsub(/^articles\//, '')
+      output_dir = File.join(config[:build_dir], 'images', 'ogp')
+      FileUtils.mkdir_p(output_dir) unless File.exist?(output_dir)
+      output_path = File.join(output_dir, ogp_image_name)
+
+      # OgpGenerator を呼び出して画像を生成
+      OgpGenerator.generate_ogp_image(resource.data.title, output_path)
+    end
+  end
 end
 
 configure :server do

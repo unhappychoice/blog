@@ -15,3 +15,4 @@ gem 'nokogiri'
 gem 'redcarpet', '~> 3.6'
 gem 'slim', '~> 5.0'
 gem "webrick", "~> 1.9"
+gem "rmagick"
