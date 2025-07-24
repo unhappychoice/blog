@@ -1,6 +1,7 @@
 ---
 title: My Github activity in 2017 / 08
 tags: github,programming
+description: "アイデアを参考にして今月から自動で記事作成するように。 ただし、投稿まで自動化はせずPR作成後コメント書いてマージするように。"
 ---
 
 [OSS コントリビューションや GitHub 上のアクティビティのまとめレポート投稿を自動化する | log.sugarshin.net](https://log.sugarshin.net/2017/05/07/automation-monthly-report)

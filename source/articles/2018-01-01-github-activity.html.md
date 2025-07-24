@@ -1,6 +1,7 @@
 ---
 title: My Github activity in 2017 / 12
 tags: github,programming
+description: "あけおめことよろ"
 ---
 
 あけおめことよろ

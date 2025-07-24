@@ -1,6 +1,9 @@
 require 'active_support/all'
 require 'fileutils'
 require_relative './lib/latex_template'
+require_relative './lib/ogp_helper'
+
+helpers OgpHelper
 
 Tilt.register LatexTemplate, 'math'
 
@@ -33,26 +36,6 @@ activate :blog do |blog|
   blog.paginate = true
   blog.per_page = 10
   blog.page_link = "page/{num}"
-end
-
-activate :ogp do |ogp|
-  ogp.namespaces = {
-    fb: data.ogp.fb,
-    og: data.ogp.og,
-    twitter: data.ogp.twitter
-  }
-end
-
-helpers do
-  def ogp_tag
-    ogp_tags do |property, content|
-      if property.include?('twitter')
-        concat_content(tag(:meta, name: property, property: content))
-      else
-        concat_content(tag(:meta, property: property, content: content))
-      end
-    end
-  end
 end
 
 configure :build do

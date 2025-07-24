@@ -1,6 +1,7 @@
 ---
 title: My Github activity in 2019 / 09
 tags: github,programming
+description: "Repository 大量生産の巻"
 ---
 
 Repository 大量生産の巻

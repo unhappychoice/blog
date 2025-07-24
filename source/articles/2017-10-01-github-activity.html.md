@@ -1,6 +1,7 @@
 ---
 title: My Github activity in 2017 / 09
 tags: github,programming
+description: "お手伝いし始めたりしてるので、OSS稼働少なめ。かつ、それまでほぼデイトレーダと化していたのもある。"
 ---
 
 お手伝いし始めたりしてるので、OSS稼働少なめ。かつ、それまでほぼデイトレーダと化していたのもある。

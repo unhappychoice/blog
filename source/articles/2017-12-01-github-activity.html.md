@@ -1,6 +1,7 @@
 ---
 title: My Github activity in 2017 / 11
 tags: github,programming
+description: "色々ちょこちょこ"
 ---
 
 色々ちょこちょこ

@@ -1,13 +1,8 @@
 ---
 title: インフィニティニキでポートレート撮った話
 tags: gaming,other
-ogp:
-  og:
-    image:
-      '': https://blog.unhappychoice.com/images/2025-07-17-infinity-nikki/20250524220654_1.jpg
-      type: image/jpeg
-      width: 3840
-      height: 2160
+image: /images/2025-07-17-infinity-nikki/20250524220654_1.jpg
+description: "自分では絶対に進んでプレイしないようなゲームで、写真を撮るのが好きだったことを思い出した。"
 ---
 
 自分では絶対に進んでプレイしないようなゲームで、写真を撮るのが好きだったことを思い出した。
