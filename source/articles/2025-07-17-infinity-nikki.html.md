@@ -1,6 +1,6 @@
 ---
 title: インフィニティニキでポートレート撮った話
-tags: gaming,other
+tags: gaming,others
 image: /images/2025-07-17-infinity-nikki/20250524220654_1.jpg
 description: "自分では絶対に進んでプレイしないようなゲームで、写真を撮るのが好きだったことを思い出した。"
 ---

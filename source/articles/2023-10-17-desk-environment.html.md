@@ -1,6 +1,6 @@
 ---
 title: デスク環境の変遷
-tags: programming,other
+tags: programming,others
 image: /images/2023-10-17-desk-environment/2023-2.jpg
 description: "自分のための回顧録"
 ---
