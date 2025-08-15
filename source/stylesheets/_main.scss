@@ -67,9 +67,14 @@ body {
       border-radius: 0;
     }
 
+    pre.highlight {
+      margin: 0 -1 * $middle-space;
+      padding: $middle-space;
+      background: $color-deep;
+    }
+
     code {
       font-size: 87.5%;
-      color: $color-middle;
       word-break: break-word;
     }
 
