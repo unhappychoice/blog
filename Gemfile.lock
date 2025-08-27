@@ -177,7 +177,7 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     redcarpet (3.6.1)
-    rexml (3.4.1)
+    rexml (3.4.2)
     rmagick (6.1.4)
       observer (~> 0.1)
       pkg-config (~> 1.4)
