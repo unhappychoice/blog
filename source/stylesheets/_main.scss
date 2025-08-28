@@ -89,6 +89,49 @@ body {
       }
     }
 
+    blockquote {
+      margin: $middle-space 0;
+      padding: $space;
+      border-left: 4px solid $color-border;
+      color: $color-font-light;
+      font-style: italic;
+
+      p {
+        margin: 0;
+      }
+
+      p + p {
+        margin-top: $space;
+      }
+    }
+
+    table {
+      width: 100%;
+      margin: $middle-space 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+      font-size: 13px;
+
+      th, td {
+        padding: $small-space;
+        text-align: left;
+        border: 1px solid $color-border;
+        vertical-align: top;
+      }
+
+      th {
+        font-weight: 600;
+        color: $color-font-inv;
+        background: #888;
+      }
+
+      code {
+        background: rgba($color-border, 0.1);
+        padding: 2px 4px;
+        border-radius: 2px;
+      }
+    }
+
     .footnotes {
       margin: 48px -24px -32px;
       padding: 8px 0 24px;
