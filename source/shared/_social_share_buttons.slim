@@ -1,0 +1,13 @@
+.social-share-buttons
+  .social-share-button.hatena
+    a href="http://b.hatena.ne.jp/add?mode=confirm&url=#{CGI.escape(URI.join('https://blog.unhappychoice.com', current_page.url))}&title=#{current_page.respond_to?(:title) ? current_page.title : 'blog.unhappychoice.com'}" target="_blank" rel="noopener"
+      .icon B!
+      .text はてな
+  .social-share-button.twitter
+    a href="https://twitter.com/intent/tweet?text=#{current_page.respond_to?(:title) ? current_page.title : 'blog.unhappychoice.com'}&url=#{CGI.escape(URI.join('https://blog.unhappychoice.com', current_page.url))}" target="_blank" rel="noopener"
+      .icon 𝕏
+      .text X (Twitter)
+  .social-share-button.facebook
+    a href="https://www.facebook.com/sharer/sharer.php?u=#{CGI.escape(URI.join('https://blog.unhappychoice.com', current_page.url))}" target="_blank" rel="noopener"
+      .icon f
+      .text Facebook

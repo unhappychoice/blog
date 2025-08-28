@@ -50,6 +50,7 @@ body {
     &__content {
       margin-top: 0;
       padding: 0 $middle-space $middle-space;
+      position: relative;
 
       div {
         position: relative;
@@ -179,6 +180,61 @@ body {
     }
   }
 }
+
+.social-share-buttons {
+  position: absolute;
+  top: 418px;
+  left: calc(50% - 600px);
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: none;
+
+  @media only screen and (min-width: 1200px) {
+    display: block;
+  }
+
+  .social-share-button {
+    margin-bottom: 15px;
+    
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: transparent;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+
+        .icon {
+          color: $color-font-inv;
+        }
+
+        .text {
+          color: $color-font-inv;
+        }
+      }
+
+      .icon {
+        font-size: 18px;
+        font-weight: bold;
+        color: opacify($color-font-inv-light, .2);
+        margin-bottom: 2px;
+      }
+
+      .text {
+        font-size: 10px;
+        color: opacify($color-font-inv-light, .2);
+        line-height: 1;
+      }
+    }
+  }
+}
+
 
 .heading {
   margin: 0;
