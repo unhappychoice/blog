@@ -26,6 +26,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xmlns:media" => "http://sear
         URI.join(site_url, "/images/ogp/#{ogp_path}")
       end
       xml.tag!("media:content", "url" => image_url, "medium" => "image") if image_url
+      xml.tag!("media:thumbnail", "url" => image_url, "width" => "1200", "height" => "630") if image_url
 
       xml.summary article.summary, "type" => "html"
       xml.content article.body, "type" => "html"
