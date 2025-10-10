@@ -1,6 +1,6 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom", "xmlns:media" => "http://search.yahoo.com/mrss/" do
-  site_url = "http://blog.unhappychoice.com"
+  site_url = "https://blog.unhappychoice.com"
   xml.title "unhappychoice.com"
   xml.subtitle "unhappychoiceの日常やプログラミングなど"
   xml.id URI.join(site_url, blog.options.prefix.to_s)
