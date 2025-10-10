@@ -30,7 +30,7 @@ READMORE
 
 ### circleci-cli
 
-メンテ活動 & リネーム & [RubyFlow](http://www.rubyflow.com) で宣伝した。
+メンテ活動 & リネーム & [RubyFlow](https://www.rubyflow.com) で宣伝した。
 宣伝したらちょっとだけ Star 増えたかつ、 PR もらったりしたので最近各所で見る [AllContributors](https://github.com/all-contributors/all-contributors) 入れたりなども。
 あと GitHub Action入れてみたり。
 

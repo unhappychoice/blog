@@ -302,4 +302,4 @@ $$
 数学表現をするのに、結局 Tex が最強としかならなかった。
 
 [^1]: [https://github.com/unhappychoice/blog/blob/a012dd4099006fbebb5c5db6b0e9e61c8bd2671c/lib/latex_template.rb#L6](https://github.com/unhappychoice/blog/blob/a012dd4099006fbebb5c5db6b0e9e61c8bd2671c/lib/latex_template.rb#L6)
-[^2]: [amscd — MathJax 3.1 documentation](http://docs.mathjax.org/en/latest/input/tex/extensions/amscd.html)
+[^2]: [amscd — MathJax 3.1 documentation](https://docs.mathjax.org/en/latest/input/tex/extensions/amscd.html)
