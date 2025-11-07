@@ -1,7 +1,11 @@
 #!/bin/bash
 
+set -e
+
+REPO_URL="git@github.com:unhappychoice/blog.unhappychoice.com.git"
+
 # Clone the existing repository to preserve history
-git clone git@github.com:unhappychoice/blog.unhappychoice.com.git deploy_repo
+git clone "$REPO_URL" deploy_repo
 cd deploy_repo
 
 # Copy built files
@@ -11,8 +15,12 @@ echo "blog.unhappychoice.com" > CNAME
 
 # Commit and push changes
 git add .
-git commit -m "chore: deployment from CircleCI [skip ci]" || echo "No changes to deploy"
-git push origin master >/dev/null 2>&1
+if git commit -m "chore: deployment from CI [skip ci]"; then
+  git push origin master
+  echo "Deployment completed successfully"
+else
+  echo "No changes to deploy"
+fi
 
 # Cleanup
 cd ..
