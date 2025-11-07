@@ -13,11 +13,11 @@ html
     = partial 'shared/stylesheets'
     = partial 'shared/javascripts'
 
-    body
-      main#main role="main"
-        = partial 'shared/social_share_buttons'
-        .content
-          = partial 'shared/title'
-          = yield
+  body
+    main#main role="main"
+      = partial 'shared/social_share_buttons'
+      .content
+        = partial 'shared/title'
+        = yield
 
-      = partial 'shared/sidebar', locals: { blog: blog }
+    = partial 'shared/sidebar', locals: { blog: blog }

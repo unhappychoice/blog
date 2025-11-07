@@ -98,7 +98,7 @@ GEM
     middleman (4.6.2)
       middleman-cli (= 4.6.2)
       middleman-core (= 4.6.2)
-    middleman-blog (4.2.0)
+    middleman-blog (4.1.0)
       addressable (~> 2.3)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
@@ -215,7 +215,7 @@ DEPENDENCIES
   inline_svg
   mgd
   middleman (~> 4.6)
-  middleman-blog
+  middleman-blog (~> 4.1.0)
   middleman-livereload
   middleman-minify-html
   middleman-syntax
@@ -226,4 +226,4 @@ DEPENDENCIES
   webrick (~> 1.9)
 
 BUNDLED WITH
-   2.4.19
+   2.6.9
