@@ -28,7 +28,7 @@ GEM
     contracts (0.17.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    dotenv (3.1.8)
+    dotenv (3.2.0)
     drb (2.2.3)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
