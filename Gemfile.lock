@@ -171,7 +171,7 @@ GEM
     rack (3.1.19)
     rack-livereload (0.6.1)
       rack (>= 3.0, < 3.2)
-    rackup (2.2.1)
+    rackup (2.3.1)
       rack (>= 3)
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
