@@ -85,8 +85,8 @@ GEM
     json (2.18.0)
     jwt (2.10.2)
       base64
-    kramdown (2.5.1)
-      rexml (>= 3.3.9)
+    kramdown (2.5.2)
+      rexml (>= 3.4.4)
     listen (3.10.0)
       logger
       rb-fsevent (~> 0.10, >= 0.10.3)
