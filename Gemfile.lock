@@ -82,7 +82,7 @@ GEM
     inline_svg (1.10.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
-    json (2.18.0)
+    json (2.18.1)
     jwt (2.10.2)
       base64
     kramdown (2.5.2)
