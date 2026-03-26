@@ -5,3 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/unhappychoice/blog.svg)
 
 My blog powered by [Middleman](https://middlemanapp.com)
+
+## Author
+
+[@unhappychoice](https://unhappychoice.com)
