@@ -2,12 +2,19 @@
   navigation: auto;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+}
+
 ::view-transition-old(root) {
-  animation: fade-out 0.2s ease-in;
+  animation-name: fade-out;
 }
 
 ::view-transition-new(root) {
-  animation: fade-in 0.3s ease-out;
+  animation-name: fade-in;
+  mix-blend-mode: normal;
 }
 
 @keyframes fade-out {
