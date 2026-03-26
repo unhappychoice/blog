@@ -1,5 +1,13 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   background: $color-dark;
+}
+
+body {
+  margin: 0;
 }
 
 html, body {
