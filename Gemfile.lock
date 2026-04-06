@@ -35,7 +35,7 @@ GEM
       http_parser.rb (~> 0)
     erubi (1.13.1)
     eventmachine (1.2.7)
-    execjs (2.10.0)
+    execjs (2.10.1)
     faraday (1.10.5)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
