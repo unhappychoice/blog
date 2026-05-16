@@ -215,7 +215,6 @@ DEPENDENCIES
   activesupport
   builder (~> 3.3)
   github_api
-  haml (~> 7.2)
   inline_svg
   mgd
   middleman (~> 4.6)
