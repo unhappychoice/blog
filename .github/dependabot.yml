@@ -54,3 +54,7 @@ updates:
   - dependency-name: faraday-retry
     update-types:
     - version-update:semver-major
+  # parallel 2.x requires Ruby >= 3.3; this site still runs on Ruby 3.2.
+  - dependency-name: parallel
+    update-types:
+    - version-update:semver-major
