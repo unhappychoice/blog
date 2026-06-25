@@ -1,0 +1,312 @@
+---
+title: 圏論 | 圏
+tags: programming,category_theory
+---
+
+圏とはなんぞやということを理解しないことには何も説明が出来ないので、まずはさくっと。
+
+READMORE
+
+各要素をインフォーマルに説明してから、最後に定義を見ていきたい。
+圏の模式図は↓。
+
+<tex>
+  \begin{tikzpicture}
+    \draw (0,0) circle (3);
+    \node (Category) at (-2, 3.2) {\large $\cats{C}$};
+    \node[circle, scale=0.6, fill=black, label=a] (a) at (-2, 0) {};
+    \node[circle, scale=0.6, fill=black, label=below:b] (b) at (0, -2) {};    
+    \node[circle, scale=0.6, fill=black, label=c] (c) at (1, 1) {};
+    
+    \draw[->, thick] (a)--(b) node[midway, sloped, above] {$f$};
+    \draw[->, thick] (b)--(c) node[midway, sloped, above] {$g$};
+    \draw[->, thick] (a)--(c) node[midway, sloped, above] {$g\circ f$};
+    \draw[->, thick] (a) to[out=225, in=135, looseness=15] (a) node[below=8] {$\id{a}$};
+    \draw[->, thick] (b) to[out=315, in=45, looseness=15] (b) node[right=12] {$\id{b}$};
+    \draw[->, thick] (c) to[out=315, in=45, looseness=15] (c) node[right=12] {$\id{c}$};
+  \end{tikzpicture}
+</tex>
+
+## 圏
+図中の円の内部全て（+図中に書ききれていない法則) を全部まとめて圏 \\(\cats{C}\\) という。
+ちゃんと書くと
+
+- 対象
+- 射（の始域と終域）
+- 射の合成という演算
+
+があって、射の合成が結合律と単位律を満たすもの、となる。
+
+まずは圏自体の表記について、普通 \\(\cats{C}\\) のように、Categoryの頭文字のC一文字を使うのが慣例。
+別の一般の圏を考える必要があれば \\(\cats{D}\\), \\(\cats{E}\\)... のように続く。
+また、対象が具体的に何であるか分かる場合には、対象の名前を用いて \\(\catl{Set}\\), \\(\catl{Group}\\) のようにも表わす。
+
+また、要するに圏とは定義のみで、プログラミングで言えばインターフェースやトレイトのようなものである。
+後続の記事で紹介するが、対象や射が具体的な他のなにかである具体的な圏を色々考えることが出来て、それらの間の関係だったり共通な部分を調べることが一律圏の言葉で可能になる。
+
+## 対象
+図の \\(a, b, c\\) に当たる、点で書かれるもの。
+
+別に数字や集合ではなくとも、圏の定義を満たすものであればなんでもよい。
+プログラミングの圏なら型が対象になるし、ひらがな50文字を対象としたひらがなの圏を作っても良い。
+
+ちなみに圏論では、対象が何であるか？ということにはあまり触れることはなく、あくまで射の存在や可換性だったりが議論のメインになる。
+というのも、対象がどういうものであるのか？という部分に着目したり前提をおいてしまうと、抽象的な視点ではなくなってしまうというか、
+あくまで対象同士の関係性 (射だったり関手) をメインに見ることで、対象を入れ替えてもなりたつ普遍的な構造を調べることができるようになる。
+
+この射を中心に据えることを突き詰めれば、対象と恒等射は同一視できる（もしそこに恒等射 \\(\id{a}\\) だけがあっても \\(a\\) が存在するということと同じ） ので、
+対象を明示せずに恒等射のみを使って圏を定義することもできる。
+
+## 射
+図の \\(f, g\\) で書かれている矢印。
+
+射 \\(f\\) は対象から対象への矢印で、もちろん矢印の元と先を持っている。
+この元を始域、先を終域と呼んでいて、それぞれ \\(\mathrm{dom}(f)\\) と \\(\mathrm{cod}(f)\\) と書く。
+
+例えば始域が対象 \\(a\\) で終域が対象 \\(b\\) の射 \\(f\\) は
+
+$$
+\mathrm{dom}(f) = a; \mathrm{cod}(f) = b
+$$
+$$ 
+f:a \rightarrow b
+$$
+
+と表す。上の行と下の行は基本的に同じことを表していて、普通は下で表記する。（いちいち始域・終域と書く必要はないので）
+
+集合を知っている人であれば、関数もとい写像を思い浮かべるかもしれない。実際集合の圏 \\(\catl{Set}\\) では写像を射とする。
+が、他の一般の圏では写像とは限ず、あくまで圏の定義をみたすものであれば何でもよい。
+
+### 恒等射
+図中の \\(\id{a}, \id{b}, \id{c}\\)
+
+対象を \\(a\\) とすると、 \\(a\\) から \\(a\\) に、つまり自分自身に戻る射で \\(\id{a}\\) と書かれる。
+つまりは、
+
+$$
+\id{a}:a \rightarrow a
+$$
+
+全ての対象に必ず存在していなければならない。[^1]必ず存在しているので、図などでは省略されたりもする。
+
+### Hom集合
+例えば対象\\(a\\) から \\(b\\) に向かう射というのは別に1本ではなくて良く、何本存在しても良い。
+つまり、射は集合をなしていてHom集合[^2]と呼び、\\(\hom{a}{b}\\) と書く。
+または、圏 \\(\cats{C}\\) にある対象 \\(a,b\\) の間の射なので \\(\cats{C}(a, b)\\) とも書かれる。
+（が、\\(\hom{a}{b}\\) を記事中では利用したい
+
+#### 射が複数
+$$\hom{a}{b} = \\{f, g, h, ...\\}$$
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a \arrow[r,bend left, "f"] \arrow[r, "g"] \arrow[r, bend right, "h"] & b
+  \end{tikzcd}   
+</tex>
+
+#### 射が1本
+$$\hom{a}{b} = \\{f\\}$$
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a \arrow[r,"f"] & b
+  \end{tikzcd}
+</tex>
+
+#### 射が1本もない
+$$\hom{a}{b} = \emptyset$$ 
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a & b
+  \end{tikzcd}   
+</tex>
+
+## 射の合成
+
+図の \\(g \circ f\\) の \\(\circ\\)
+\\(f\\) と \\(g\\) の順番がややこしいことこの上ないのだが、英語読みなら \\(\circ\\) は after なので
+`g after f` つまり f に最初に適用すると一発で覚えられた。
+
+始域と終域、つまり矢印の元と先が合う**すべて**の2つの射 \\(f, g\\) に対して、合成 \\(\circ\\)という操作が出来なければいけない。
+
+言い換えると、例えば図の \\(f: a \rightarrow b\\) と \\(g: b \rightarrow c\\) という射があったときに 
+\\(h: a \rightarrow c\\) という射が**必ず**存在して可換になる、ということである。
+  
+また、可換なことを確かめるのに、圏論では以下のような図式をしょっちゅう書く。
+
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a \arrow[r,"f"] \arrow[rd, "h"] & b \arrow[d,"g"]\\
+    & c
+  \end{tikzcd}
+</tex>
+
+上の図式が可換（どちらの道を通っても結果が同じ）と言うと、式 \\(g \circ f = h\\) と一対一対応していて、全く同じことを示している。
+
+## 法則
+
+登場人物的なものは以上がだが、それに加えて2つの法則を満たしていなければならない。
+
+### 結合律
+
+$$
+h ◦ (g \circ f) = (h \circ g) ◦ f
+$$
+
+始域と終域が合っていて合成できる射の組**すべて**に関して、どの順番で合成しても**必ず**結果が同じにならなければいけない。
+つまり、下の図式が可換になること。（繰り返すが、式と同じことを表している。
+
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a \arrow[r,"f"] \arrow[rr, bend left, "g \circ f"] & b \arrow[r,"g"] \arrow[rr, bend right, "h \circ g"] & c \arrow[r, "h"] & d
+  \end{tikzcd}
+</tex>
+
+数学弱にとっては、結合法則なんて満たしていて当たり前じゃんと一瞬思うのだが、満たさない例は [結合法則 | Wikipedia](https://ja.wikipedia.org/wiki/%E7%B5%90%E5%90%88%E6%B3%95%E5%89%87) にたくさん載っている。
+例えばプログラミングの演算子を一緒くたに考えれば、満たしていない。[^2]
+
+```
+1 + (3 * 5) != (1 + 3) * 5  
+```
+
+ので、
+
+- 射: プログラミングの数字に適用できる演算子
+- 対象: Integer 等の適当な数字
+
+は圏にはならない。
+
+### 単位律
+
+$$
+f \circ \id{a} = \id{b} \circ f = f
+$$
+
+恒等射と合成しても、元の射と等しくならなければいけない。下の図式が可換になること。
+
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a \arrow[r,"f"] \arrow[loop left, "\id{a}"] & b \arrow[loop right, "\id{b}"]
+  \end{tikzcd}
+</tex>
+
+結合律の形に寄せて、 \\(a\\) と \\(b\\) と \\(f\\) を複数回登場させてもよい。
+
+<tex>
+  \begin{tikzcd}[scale cd=1.6, sep=huge]
+    a \arrow[r,"f"] \arrow[rr, bend left, "\id{a}"] \arrow[rrr, bend left=50, "f"] & b \arrow[rr, bend right, "\id{b}"] & a \arrow[r, "f"] & b
+  \end{tikzcd}
+</tex>
+
+
+## 定義
+最後にちゃんとした定義を見ていく。
+http://www.math.s.chiba-u.ac.jp/~matsu/math/category.pdf を参考に書くと
+
+### 圏の定義
+圏 \\(\cats{C}\\) は6つ組 \\(\cats{C}=\langle \object{C},\morphism{C},\mathrm{dom},\mathrm{cod},\mathrm{id},\circ\rangle\\) で
+
+- クラス \\(\object{C}\\)。その要素を対象と呼ぶ。
+- クラス \\(\morphism{C})\\)。その要素を射と呼ぶ。
+- 写像 \\(\rm{dom}:\morphism{C} \rightarrow \object{C}\\)。射 \\(f\\) に対し \\(\mathrm{dom}(f)\\) を始域と呼ぶ。
+- 写像 \\(\rm{cod}:\morphism{C} \rightarrow \object{C}\\)。射 \\(f\\) に対し \\(\mathrm{cod}(f)\\) を終域と呼ぶ。
+- 写像 \\(\rm{id}:\object{C} \rightarrow \morphism{C}; a \mapsto \id{a}\\)で、これを恒等射と呼ぶ。
+- 任意の \\(a,b,c \in \object{C}\\) に対する写像 \\(\circ : \hom{a}{b} \times \hom{b}{c} \rightarrow \hom{a}{c}\\)。この演算を合成と呼ぶ。
+
+さらに以下を満たすものである。
+
+- 結合律 
+    - \\(f : a \rightarrow b , g : b \rightarrow c, h : c \rightarrow d\\) のとき \\(h ◦ (g \circ f) = (h \circ g) ◦ f\\)
+- 恒等律 
+    - 任意の \\(f \in \morphism{C}\\) に対し、 \\(a = \mathrm{dom}(f), b = \mathrm{cod}(f)\\) として、 \\(f \circ \id{a} = \id{b} \circ f = f\\)
+
+### 説明
+
+ここで説明を書こうと思ったが、上の方で書いてあることとほぼ同じなので、特に書くことがなかった。
+冗長だが、大事なことは何度も書くべきなので、ポイントだけまとめると
+
+- 対象と射がある
+- 射は出発地点と行き先が繋がっていれば必ず合成できる 
+- 対象には恒等射が必ず存在する
+- 合成は結合律・恒等律を満たす
+
+さらに一つ補足をしておくと、対象や射は定義にもある通り、一般にはクラス [^3] をなしているので、普通に圏と言ったら射や対象はクラスのである必要がある。
+ただし、それらがクラスではなく集合になる圏を特別に `小さい圏` と呼び、記事中では圏と言ったら小さい圏を考える。
+
+### 擬似コード
+
+参考までに、定義をあくまで疑似コードというか、動かないし正確ではないのを承知で書く。
+なお、あとの記事でも触れると思うが、コードに関して基本的に Ruby を用いる。
+
+```ruby
+class Category
+  #############################################################
+  # 要素
+  
+  # 対象
+  attr_accessor :objects
+  
+  # 射 
+  attr_accessor :morphisms
+  
+  # 始域
+  def dom(f) 
+    objects.find_by do |object| 
+      # 射 f の始域となる対象なら true
+    end # not nil で必ず1つ存在
+  end
+  
+  # 終域
+  def cod(f) 
+    objects.find_by do |object| 
+      # 射 f の終域となる対象なら true
+    end # not nil で必ず1つ存在
+  end
+  
+  # 恒等射
+  def id(object) 
+    morphisms.find_by do |morphism|
+      # 対象に対する恒等射なら true
+    end # not nil で必ず1つ存在
+  end
+  
+  # 射の合成
+  def composition(f, g)
+    raise unless cod(f) == dom(g) # 始域と終域が等しい2つの射だけで成り立てばよい
+     
+    # 射は Proc に限らないが、あえて書くとするとこう表現するしか無いので
+    Proc.new { |value| morphism_g(morphism_f(value)) } 
+  end
+  
+  #############################################################
+  # 法則（仕様・テスト）
+
+  # 結合律
+  def associative?
+    morphisms.all? do |f|
+      morphisms.all? do |g|
+        morphisms.all? do |h|
+          # 始域と終域がそれぞれ等しい、合成ができる射だけで成り立てばよい
+          next true unless cod(f) == dom(g) && cod(g) == dom(h)
+     
+          composition(compsition(f, g), h) == composition(f, compsition(g, h)) # true
+        end
+      end
+    end
+  end
+
+  # 恒等律
+  def identity?
+    morphisms.all? do |f|
+      a = dom(f) # 射の始域 (つまり対象)
+      b = cod(f) # 射の終域 (つまり対象)
+      f == composition(id(a), f) && composition(id(a), f) == composition(f, id(b)) # true  
+    end
+  end
+end
+
+```
+
+あくまでふいんき（なぜか変換できない）
+
+[^1]: 1つでも欠けていれば、それは圏ではない
+[^2]: 掛け算のみ、足し算のみをとってきて射とすれば、当然結合率を満たしているが
+[^3]: 適当に言うと、集合よりすごくて、すべての集合の集合みたいなものや、もっとすごい真のクラスを含むもの。ちゃんとしたことが知りたい人は他の文献を参照するべき。
