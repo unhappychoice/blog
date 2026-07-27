@@ -12,6 +12,6 @@ gem 'middleman-syntax'
 gem 'middleman-minify-html'
 gem 'nokogiri'
 gem 'redcarpet', '~> 3.6'
-gem 'slim', '~> 5.0'
+gem 'slim', '~> 5.2'
 gem "webrick", "~> 1.9"
 gem "rmagick"
