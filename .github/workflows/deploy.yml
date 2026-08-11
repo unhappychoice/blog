@@ -49,7 +49,7 @@ jobs:
 
       - name: Setup git
         run: |
-          git config --global user.name 'GitHub Actions'
+          git config --global user.name 'Yuji Ueki'
           git config --global user.email 'unhappychoice@gmail.com'
 
       - name: Setup SSH
