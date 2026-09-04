@@ -183,7 +183,7 @@ GEM
       ffi (~> 1.0)
     redcarpet (3.6.1)
     rexml (3.4.4)
-    rmagick (7.1.2)
+    rmagick (7.1.3)
       observer (~> 0.1)
       pkg-config (~> 1.4)
     rouge (4.7.0)
