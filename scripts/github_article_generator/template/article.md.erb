@@ -13,7 +13,7 @@ READMORE
 <% rs = releases[repository.title] || []%>
 
 <% if prs.empty? && rs.empty? %>
-<%= "- 🎉　Created repository (#{repository.created_at.to_time_string})" %>
+<%= "- 🎉　Created repository (#{LastMonth.format(repository.created_at)})" %>
 <% end %>
 
 <% unless prs.empty? %>
