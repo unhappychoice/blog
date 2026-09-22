@@ -13,8 +13,9 @@ class TexElement
   def full_content
     <<~TEMPLATE
         \\documentclass[varwidth=20cm, border=1pt]{standalone}
-        \\usepackage{graphicx, subcaption, tikz, amsmath}
-        \\usetikzlibrary{arrows}
+        \\usepackage{amsmath, graphicx, subcaption, tikz}
+        \\usetikzlibrary{arrows, cd}
+        \\tikzcdset{scale cd/.style={every label/.append style={scale=#1}, cells={nodes={scale=#1}}}}
         #{tex_macros.join("\n")}
         \\begin{document}
         \\fontsize{14pt}{20pt}\\selectfont
@@ -44,7 +45,7 @@ class TexElement
         \newcommand{\cats}[1]{\mathcal{#1}}
         \newcommand{\catl}[1]{\mathbf{#1}}
         \newcommand{\set}[1]{\mathbb{#1}}
-        \newcommand{\id}[1]{\mathbf{id}_{#1}}
+        \newcommand{\id}[1]{\mathrm{id}_{#1}}
         \newcommand{\functor}[1]{\mathbf{#1}}
         \newcommand{\bold}[1]{\bf #1}
       ]
