@@ -143,7 +143,7 @@ GEM
     padrino-support (0.16.2)
     parallel (1.28.0)
     parslet (2.0.0)
-    pkg-config (1.6.5)
+    pkg-config (1.6.6)
     prism (1.9.0)
     public_suffix (7.0.5)
     racc (1.8.1)
