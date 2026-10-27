@@ -52,7 +52,7 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    hashie (5.1.0)
+    hashie (5.2.0)
       logger
     htmlcompressor (0.2.0)
     http_parser.rb (0.8.1)
