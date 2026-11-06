@@ -20,3 +20,7 @@ updates:
   - dependency-name: parallel
     update-types:
     - version-update:semver-major
+  # minitest still pins prism ~> 1.x; drop once they relax.
+  - dependency-name: prism
+    update-types:
+    - version-update:semver-major
