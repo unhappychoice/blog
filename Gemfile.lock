@@ -129,7 +129,7 @@ GEM
       uri (>= 0.11.1)
     net-protocol (0.4.0)
       timeout
-    nokogiri (1.19.4)
+    nokogiri (1.19.7)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     observer (0.1.2)
