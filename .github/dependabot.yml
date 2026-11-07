@@ -20,3 +20,7 @@ updates:
   - dependency-name: parallel
     update-types:
     - version-update:semver-major
+  # prism 2.x is blocked by rubocop-ast/parser constraints and makes Dependabot fail.
+  - dependency-name: prism
+    update-types:
+    - version-update:semver-major
