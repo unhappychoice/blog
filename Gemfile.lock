@@ -147,7 +147,7 @@ GEM
     prism (2.1.0)
     public_suffix (7.0.5)
     racc (1.8.1)
-    rack (3.1.23)
+    rack (3.1.24)
     rack-livereload (0.6.1)
       rack (>= 3.0, < 3.2)
     rackup (2.3.1)
