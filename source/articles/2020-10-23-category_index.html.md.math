@@ -1,0 +1,96 @@
+---
+title: 圏論 | 目次
+tags: programming,category_theory
+---
+
+圏論の記事についての目次。
+
+あくまで前提知識がない人を対象とし、理解の助けになる表現を使っていきたいので、用語等の正確性を少し欠く場合もあるかもしれない。
+また、一般の説明では代数の知識（群、環、体、 etc...) を要求を要求することが多いが、なるべくその必要がないようにしたい。
+が、その代わりにプログラミングに関する知識を前提としつつ、プログラミングでの例を多く取り扱いたいつもりでいる。
+
+つまり、きちんとした定義や議論を求める方は参考の欄に掲載されている文献を参照されたし。
+なお、一通り圏論の内容をカバーするまで書くかは未定。
+
+READMORE
+
+## 目次
+- [圏論 | なぜ圏論が必要か](/2020/10/24/category-motivation.html)
+- [圏論 | 圏](/2020/10/30/category-category.html)
+- ... 
+
+## 逆引き的なもの
+<tex>
+  \begin{tikzpicture}
+    \draw (0,0) circle (3);
+    \node (Category) at (-2, 3.2) {\large $\cats{C}$};
+    \node[circle, scale=0.6, fill=black, label=a] (a) at (-2, 0) {};
+    \node[circle, scale=0.6, fill=black, label=below:b] (b) at (0, -2) {};    
+    \node[circle, scale=0.6, fill=black, label=c] (c) at (1, 1) {};
+    
+    \draw[->, thick] (a)--(b) node[midway, sloped, above] {$f$};
+    \draw[->, thick] (b)--(c) node[midway, sloped, above] {$g$};
+    \draw[->, thick] (a)--(c) node[midway, sloped, above] {$g\circ f$};
+    \draw[->, thick] (a) to[out=225, in=135, looseness=15] (a) node[below=8] {$\id{a}$};
+    \draw[->, thick] (b) to[out=315, in=45, looseness=15] (b) node[right=12] {$\id{b}$};
+    \draw[->, thick] (c) to[out=315, in=45, looseness=15] (c) node[right=12] {$\id{c}$};
+    
+    \draw (9,0) circle (3);
+    \node (Category) at (6, 3.2) {\large $\mathcal{D}$};
+    \node[circle, scale=0.6, fill=black, label=$\functor{F}(a)$] (Fa) at (7, 0) {};
+    \node[circle, scale=0.6, fill=black, label=below:$\functor{F}(b)$] (Fb) at (9, -2) {};    
+    \node[circle, scale=0.6, fill=black, label=$\functor{F}(c)$] (Fc) at (10, 1) {};
+    \draw[->, thick] (Fa)--(Fb) node[midway, sloped, above] {$\functor{F}(f)$};
+    \draw[->, thick] (Fb)--(Fc) node[midway, sloped, above] {$\functor{F}(g)$};
+    \draw[->, thick] (Fa)--(Fc) node[midway, sloped, above] {$\functor{F}(g) \circ \functor{F}(f)$};
+    \draw[->, thick] (Fa) to[out=225, in=135, looseness=15] (Fa) node[below=8] {$\mathbf{id}_{\functor{F}(a)}$};
+    \draw[->, thick] (Fb) to[out=315, in=45, looseness=15] (Fb) node[right=12] {$\mathbf{id}_{\functor{F}(b)}$};
+    \draw[->, thick] (Fc) to[out=315, in=45, looseness=15] (Fc) node[right=12] {$\mathbf{id}_{\functor{F}(c)}$};
+
+    \node[coordinate] (Fdom) at (3.5, 1) {};
+    \node[coordinate] (Fcodom) at (5.5, 1) {};
+    \node[coordinate] (Gdom) at (3.5, -1) {};
+    \node[coordinate] (Gcodom) at (5.5, -1) {};
+    \draw[->, thick] (Fdom)--(Fcodom) node[midway, sloped, above] {$\functor{F}$};
+    \draw[->, thick] (Gdom)--(Gcodom) node[midway, sloped, below] {$\functor{G}$};
+  \end{tikzpicture}
+</tex>
+
+### 主要な数学的対象
+
+- 圏 \\(\cats{C}, \cats{D}, ...\\)
+    - 双対圏
+    - 部分圏
+    - クライスリ圏
+    - デカルト閉圏
+    - モノイダル圏
+- 対象 \\(a, b, c, ...\\)
+    - 始対象・終対象・零対象
+- 射 \\(f, g, g \circ f, ...\\)
+    - エピ・モノ射・同型射
+    - 恒等射 \\(\id{a}, \id{b}, \id{c}, ...\\)  
+- 関手 \\(\functor{F}, \functor{G}\\)
+    - 恒等関手
+    - 自己関手
+    - 随伴関手
+    - 表現可能関手
+- 自然変換 \\(\alpha\\)
+
+### 構造・定理など
+- 極限
+    - 積・和
+    - 押し出し・引き戻し
+- モノイド
+- モナド
+- 随伴
+- 米田の補題
+- Kan拡張
+
+### 参考
+特に断りがなければ、各記事以下を参考としている。
+
+- [Saunders, MacLane. 圏論の基礎](https://www.amazon.co.jp/exec/obidos/ASIN/4621063243)
+- [Tom, Leinster. ベーシック圏論](https://www.amazon.co.jp/%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E5%9C%8F%E8%AB%96-%E6%99%AE%E9%81%8D%E6%80%A7%E3%81%8B%E3%82%89%E3%81%AE%E9%80%9F%E7%BF%92%E3%82%B3%E3%83%BC%E3%82%B9-Tom-Leinster/dp/4621300709/ref=pd_bxgy_img_2/356-7022021-4739413)
+- [Bartosz Milewski's Programming Cafe](https://bartoszmilewski.com)
+- [Category Theory - Youtube](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_)
+- [壱大整域](http://alg-d.com)
